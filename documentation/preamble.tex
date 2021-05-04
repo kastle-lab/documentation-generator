@@ -1,0 +1,66 @@
+\setlrmarginsandblock{1in}{1in}{*}
+\setulmarginsandblock{1in}{1in}{*}
+\checkandfixthelayout
+
+\usepackage{graphicx}
+
+\usepackage{enumerate,xcolor,soul,framed}
+
+\usepackage{mathtools,amssymb}
+\allowdisplaybreaks[1]
+\usepackage{url}
+\usepackage{paralist}
+\usepackage{hyperref}
+\usepackage{parskip}
+\tightlists
+
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\linespread{1.025}
+\let\oldtextlangle\textlangle
+\renewcommand{\textlangle}{{\fontfamily{pxr}\selectfont\oldtextlangle}}
+\let\oldtextrangle\textrangle
+\renewcommand{\textrangle}{{\fontfamily{pxr}\selectfont\oldtextrangle}}
+
+
+\setverbatimfont{\sffamily}
+
+\renewcommand{\theequation}{\arabic{equation}}
+
+\newlength{\drop}% for my convenience
+\newcommand*{\titleBWF}{\begingroup
+\drop = 0.1\textheight
+\parindent=0pt
+\vspace*{\drop}
+{\Huge\bfseries Ontology Design Patterns for Modeling Events, Places, \& Relationships}\\
+[\baselineskip]
+
+\vspace*{0.5\drop}
+{\Large {\itshape Contributors:}}\\
+{\large{\scshape Alicia Scheill}}\\
+{\large{\scshape Gengchen Mai}}\\
+{\large{\scshape Pascal Hitzler}}\\
+{\large{\scshape Dean Rehberger}}\\
+{\large{\scshape Rui Zhu}}\\
+{\large{\scshape Mark Schildhauer}}\\
+{\large{\scshape Lynn E. Usery}}\\
+{\large{\scshape Ling Cai}}\\
+{\large{\scshape Krzysztof Janowicz}}\\
+{\large{\scshape Joseph Zalewski}}\\
+{\large{\scshape Lu Zhou}}\\
+{\large{\scshape Cogan Shimizu}}\\
+{\large{\scshape Dalia Varanka}}\\[\baselineskip]
+
+{\large {\itshape Document Date:} \today}
+
+\vfill
+
+{This work was supported by The National Science Foundation through the Award \#2033521.}
+
+\endgroup}
+
+\setsecnumdepth{subsubsection}
+\maxtocdepth{section}
+\chapterstyle{tandh}
+\pagestyle{simple}
