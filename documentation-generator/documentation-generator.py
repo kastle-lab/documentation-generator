@@ -1,3 +1,5 @@
+import os, re
+
 import rdflib
 from rdflib import RDF, RDFS, OWL
 
@@ -138,8 +140,8 @@ def generate_usecases(g):
 			usecases += "\n"
 
 		usecase = str(o)
-		title, text = usecase.split("\n")
-
+		title, *text = usecase.split("\n")
+		text = "\n".join(text)
 		usecases += "\\subsubsection{" + title + "}\n"
 		usecases += text + "\n"
 		usecases += "\n"
@@ -161,6 +163,10 @@ def generate_formalization(g):
 	# There should only ever be one of these
 	for s, p, o in g.triples((None, hC, None)):
 		connections = str(o)
+
+	if connections is None:
+		formalization += "There is currently no formalization."
+		return formalization
 
 	axioms = list()
 	lines = o.split("\n")
@@ -225,6 +231,13 @@ def generate_examples(g):
 	# Create Header
 	examples = generate_header("Examples")
 	# Begin Content Generation
+	# Insert Example figure
+	hEDF = get_predicate("opla-sd", "hasExampleDiagramFileName", g)
+	for s, p, o in g.triples((None, hEDF, None)):
+		filename = str(o)
+		figure_code = generate_figure_code(filename,label="ov")
+		examples += figure_code
+	# Insert Text
 	examples += "\\begin{verbatim}\n"
 	examples += "Example Triples\n"
 	examples += "\\end{verbatim}"
@@ -239,7 +252,68 @@ section_names = ["overview", "cqs", "usecases", "formalization", "submodules", "
 section_generator_map = {key:value for (key, value) in zip(section_names, section_generators)}
 # ======================
 
-def generate_documentation(section_order, filename):
+def generate_preamble(contributors, acknowledgement):
+	preamble_start = """\\setlrmarginsandblock{1in}{1in}{*}
+\\setulmarginsandblock{1in}{1in}{*}
+\\checkandfixthelayout
+
+\\usepackage{graphicx}
+
+\\usepackage{enumerate,xcolor,soul,framed}
+
+\\usepackage{mathtools,amssymb}
+\\allowdisplaybreaks[1]
+\\usepackage{url}
+\\usepackage{paralist}
+\\usepackage{hyperref}
+\\usepackage{parskip}
+\\tightlists
+
+\\usepackage{textcomp}
+\\usepackage[T1]{fontenc}
+\\usepackage{palatino}
+\\linespread{1.025}
+\\let\\oldtextlangle\\textlangle
+\\renewcommand{\\textlangle}{{\\fontfamily{pxr}\\selectfont\\oldtextlangle}}
+\\let\\oldtextrangle\\textrangle
+\\renewcommand{\\textrangle}{{\\fontfamily{pxr}\\selectfont\\oldtextrangle}}
+
+
+\\setverbatimfont{\\sffamily}
+
+\\renewcommand{\\theequation}{\\arabic{equation}}
+
+\\newlength{\\drop}% for my convenience
+\\newcommand*{\\titleBWF}{\\begingroup
+\\drop = 0.1\\textheight
+\\parindent=0pt
+\\vspace*{\\drop}
+{\\Huge\\bfseries Ontology Design Patterns for Modeling Events, Places, \\& Relationships}\\\\
+[\\baselineskip]
+
+\\vspace*{0.5\\drop}
+{\\Large {\itshape Contributors:}}\\\\\n"""
+	# write contributors
+	preamble_contributors = ""
+	for contributor in contributors:
+		preamble_contributors += "{\\large{\\scshape ~}}\\\\\n".replace("~", contributor)
+	preamble_contributors = preamble_contributors[:-1] + "[\\baselineskip]\n\n"
+	preamble_date = """{\\large {\\itshape Document Date:} \\today}
+
+\\vfill\n\n"""
+	preamble_end = """\\endgroup}
+
+\\setsecnumdepth{subsubsection}
+\\maxtocdepth{section}
+\\chapterstyle{tandh}
+\\pagestyle{simple}"""
+
+	with open("../documentation/preamble.tex", "w") as output:
+		preamble = preamble_start + preamble_contributors + preamble_date
+		preamble +=  "{" + acknowledgement + "}\n\n" + preamble_end
+		output.write(preamble)
+
+def generate_pattern_documentation(section_order, filename):
 	g = rdflib.Graph()
 	g.parse(filename, format="ttl")
 
@@ -247,12 +321,39 @@ def generate_documentation(section_order, filename):
 	for section in section_order:
 		documentation += section_generator_map[section](g) + "\n"
 
-	with open("../documentation/documentation.tex", "w") as output:
+	with open("../documentation/output.tex", "a") as output:
 		output.write(documentation)
 		output.write("%"*35+"\n")
 		output.write("%"*11 + " End Section "+ "%"*11+"\n")
 		output.write("%"*35+"\n")
-		
-section_order = ["overview", "cqs", "usecases", "formalization", "submodules", "views", "entanglements", "examples"]
+		output.write("\n")
 
-generate_documentation(section_order, "../patterns/causal_event_pattern.ttl")
+	# Finally, get contributors for this pattern
+	creators = set()
+	creatorPred = get_predicate("dc", "creator", g)
+	for s, p, o in g.triples((None, creatorPred, None)):
+		creators.add(str(o))
+
+	return creators
+
+def generate_all_documentation(directory):
+	# Get all the patterns from the provided directory
+	patterns = os.listdir(directory)
+	# Nuke the contents of the file
+	with open("../documentation/output.tex", "w") as output:
+		pass
+	# Hardcoded info for now
+	acknowledgement = "This work was supported by The National Science Foundation through the Award \\#2033521."
+	section_order = ["overview", "cqs", "usecases", "formalization", "submodules", "views", "entanglements", "examples"]
+	# Generate sections for the patterns and get contributors
+	contributors = set()
+	for pattern in patterns:
+		pattern_file = os.path.join(directory, pattern)
+		pattern_contributors = generate_pattern_documentation(section_order, pattern_file)
+		contributors.update(pattern_contributors)
+	# Regenerate the preamble
+	generate_preamble(contributors, acknowledgement)
+
+generate_all_documentation("../patterns")
+
+
