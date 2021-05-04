@@ -1,10 +1,20 @@
-@prefix : <http://knowwheregraph.com/cell-relations#> .
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kwgr: <http://stko-roy.geog.ucsb.edu/lod/resource/> .
+@prefix modl: <https://archive.org/services/purl/domain/modular_ontology_design_library#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://knowwheregraph.com/cell-relations> .
+@prefix kwg-ont: <http://stko-roy.geog.ucsb.edu/lod/ontology/> .
+@prefix kwg-pat: <http://stko-roy.geog.ucsb.edu/lod/patterns#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+
+@base <http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations-pattern> .
 
 <http://knowwheregraph.com/cell-relations> rdf:type owl:Ontology .
 
