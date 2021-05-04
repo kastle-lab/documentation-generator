@@ -339,9 +339,13 @@ def generate_pattern_documentation(section_order, filename):
 def generate_all_documentation(directory):
 	# Get all the patterns from the provided directory
 	patterns = os.listdir(directory)
-	# Nuke the contents of the file
-	with open("../documentation/output.tex", "w") as output:
-		pass
+	# Nuke the previous contents of the file
+	with open("../documentation/patterns.tex", "w") as output:
+		output.write("\\chapter{Patterns}\n")
+		output.write("\\label{sec:mods}\n")
+		output.write("%"*35+"\n")
+		output.write("We list the individual modules of the ontology, together with their axioms and explanations thereof. Each axiom is listed only once (for now), i.e. some axioms pertaining to a module may be found in the axiom set listed for an earlier listed module. Schema diagrams are provided throughout, but the reader should keep in mind that while schema diagrams are very useful for understanding an ontology \\cite{odp-documentation}, they are also inherently ambiguous.")
+		output.write("\n\n")
 	# Hardcoded info for now
 	acknowledgement = "This work was supported by The National Science Foundation through the Award \\#2033521."
 	section_order = ["overview", "cqs", "usecases", "formalization", "submodules", "views", "entanglements", "examples"]
