@@ -3,10 +3,12 @@ documentation/output.tex
 
 # unneccessary latex files
 documentation/main.log
-documentation/main.synctex(busy)
+documentation/main.s*
 documentation/main.aux
 documentation/main.out
 documentation/main.pdf
+documentation/main.lof
+documentation/main.toc
 
 # Cogan scratch work
 scratch.py
