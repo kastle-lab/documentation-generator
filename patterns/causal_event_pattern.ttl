@@ -73,7 +73,8 @@ PCR accordingToWhom Provenance"""^^xsd:string ;
                                                                    dc:creator "Ling Cai" ;
                                                                    dc:creator "Lu Zhou" ;
                                                                    dc:creator "Mark Schildhauer" ;
-                                                                   dc:creator "Krzysztof Janowicz" .
+                                                                   dc:creator "Krzysztof Janowicz" ;
+                                                                   opla-core:hasPatternName "Causal Event Pattern" .
 
 
 #################################################################
