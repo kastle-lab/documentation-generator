@@ -107,11 +107,13 @@ def generate_cqs(g):
 	cqs += "\\begin{enumerate}[\\phantom{CQ }CQ 1.]\n"
 	# Create the predicate URI for the opla-cp:hasCompetencyQuestion
 	hCQ = get_predicate("opla-cp", "hasCompetencyQuestion", g)
+	questions = [str(o) for s, p, o in g.triples((None, hCQ, None))]
+	questions.sort()
 	# Now for each triple in the pattern, get the competency question
 	# Note: g.triples() does not guarantee order
-	for s, p, o in g.triples((None, hCQ, None)):
+	for q in questions:
 		cqs += "\t\\item "
-		cqs += str(o)
+		cqs += q
 		cqs += "\n"
 	cqs += "\\end{enumerate}"
 	# End subsection
@@ -125,14 +127,15 @@ def generate_usecases(g):
 	# Create the predicate URI for the opla-cp:addressesScenario
 	aS = get_predicate("opla-cp", "addressesScenario", g)
 	# Now for each triple in the pattern, get the scenarios (usecases)
-	scenarios = g.triples((None, aS, None))
+	scenarios = [str(o) for s,p,o in g.triples((None, aS, None))]
+	scenarios.sort()
 	# Note: g.triples() is a generator, so there is no easy way to 
 	#   generate len hence this weird conditional workaround to 
 	#   leave a token message if no competency questions are found.
 	# Note: g.triples() does not guarantee order
 	scenarios_is_empty = True
 	first = True
-	for s, p, o in scenarios:
+	for o in scenarios:
 		if first:
 			scenarios_is_empty = False
 			first = False
@@ -293,7 +296,13 @@ def generate_preamble(contributors, acknowledgement):
 
 \\vspace*{0.5\\drop}
 {\\Large {\itshape Contributors:}}\\\\\n"""
-	# write contributors
+	# Sort the contributors by space delineated last name
+	# Hopefully no one has two last names
+	contributors = list(contributors)
+	def getKey(item):
+		return item.split(" ")[-1]
+	contributors = sorted(contributors, key=getKey)
+	# Write the contributors
 	preamble_contributors = ""
 	for contributor in contributors:
 		preamble_contributors += "{\\large{\\scshape ~}}\\\\\n".replace("~", contributor)
@@ -321,7 +330,7 @@ def generate_pattern_documentation(section_order, filename):
 	for section in section_order:
 		documentation += section_generator_map[section](g) + "\n"
 
-	with open("../documentation/output.tex", "a") as output:
+	with open("../documentation/patterns.tex", "a") as output:
 		output.write(documentation)
 		output.write("%"*35+"\n")
 		output.write("%"*11 + " End Section "+ "%"*11+"\n")
