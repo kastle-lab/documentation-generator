@@ -353,8 +353,9 @@ def generate_pattern_documentation(section_order, filename):
 	# Finally, get contributors for this pattern
 	creators = set()
 	creatorPred = get_predicate("dc", "creator", g)
-	for s, p, o in g.triples((None, creatorPred, None)):
-		creators.add(str(o))
+	creator_list = [str(o) for s, p, o in g.triples((None, creatorPred, None))]
+	for c in creator_list:
+		creators.add(c)
 
 	return creators
 
