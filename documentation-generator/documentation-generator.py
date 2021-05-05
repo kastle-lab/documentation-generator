@@ -104,13 +104,18 @@ def generate_cqs(g):
 	# Create Header
 	cqs = generate_header("Competency Questions", label="cqs")
 	# Begin Content Generation
-	cqs += "\\begin{enumerate}[\\phantom{CQ }CQ 1.]\n"
 	# Create the predicate URI for the opla-cp:hasCompetencyQuestion
 	hCQ = get_predicate("opla-cp", "hasCompetencyQuestion", g)
 	questions = [str(o) for s, p, o in g.triples((None, hCQ, None))]
 	questions.sort()
 	# Now for each triple in the pattern, get the competency question
 	# Note: g.triples() does not guarantee order
+	if len(questions) == 0: 
+		cqs += "There are no competency questions listed."
+		cqs += "\n"
+		return cqs
+	
+	cqs += "\\begin{enumerate}[\\phantom{CQ }CQ 1.]\n"
 	for q in questions:
 		cqs += "\t\\item "
 		cqs += q
@@ -169,6 +174,7 @@ def generate_formalization(g):
 
 	if connections is None:
 		formalization += "There is currently no formalization."
+		formalization += "\n"
 		return formalization
 
 	axioms = list()
@@ -326,11 +332,18 @@ def generate_pattern_documentation(section_order, filename):
 	g = rdflib.Graph()
 	g.parse(filename, format="ttl")
 
+	pattern_name = ""
+	hPN = get_predicate("opla-core", "hasPatternName", g)
+	for s, p, o in g.triples((None, hPN, None)):
+		pattern_name = str(o)
+
 	documentation = ""
 	for section in section_order:
 		documentation += section_generator_map[section](g) + "\n"
 
 	with open("../documentation/patterns.tex", "a") as output:
+		output.write("\\section{" + pattern_name + "}\n")
+		output.write("\\label{fig:" + generate_label(pattern_name) + "}\n")
 		output.write(documentation)
 		output.write("%"*35+"\n")
 		output.write("%"*11 + " End Section "+ "%"*11+"\n")
