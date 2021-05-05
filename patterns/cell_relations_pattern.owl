@@ -12,24 +12,98 @@
 @prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
 @prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@base <http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations> .
 
-@base <http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations-pattern> .
+<http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations> rdf:type owl:Ontology ;
+                                                             opla-core:hasPatternName "Cell Relations Pattern" ;
+                                                             dc:creator "Alicia Scheill" ,
+                                                                        "Cogan Shimizu" ,
+                                                                        "Dalia Varanka" ,
+                                                                        "Dean Rehberger" ,
+                                                                        "Gengchen Mai" ,
+                                                                        "Joseph Zalewski" ,
+                                                                        "Krzysztof Janowicz" ,
+                                                                        "Ling Cai" ,
+                                                                        "Lu Zhou" ,
+                                                                        "Lynn E. Usery" ,
+                                                                        "Mark Schildhauer" ,
+                                                                        "Pascal Hitzler" ,
+                                                                        "Rui Zhu" .
 
-<http://knowwheregraph.com/cell-relations> rdf:type owl:Ontology ;
-											dc:creator "Cogan Shimizu" ;
-                                                                   dc:creator "Pascal Hitzler" ;
-                                                                   dc:creator "Rui Zhu" ;
-                                                                   dc:creator "Dean Rehberger" ;
-                                                                   dc:creator "Lynn E. Usery" ;
-                                                                   dc:creator "Dalia Varanka" ;
-                                                                   dc:creator "Joseph Zalewski" ;
-                                                                   dc:creator "Gengchen Mai" ;
-                                                                   dc:creator "Alicia Scheill" ;
-                                                                   dc:creator "Ling Cai" ;
-                                                                   dc:creator "Lu Zhou" ;
-                                                                   dc:creator "Mark Schildhauer" ;
-                                                                   dc:creator "Krzysztof Janowicz" ;
-                                                                   opla-core:hasPatternName "Cell Relations Pattern" .
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla-core#hasPatternName
+opla-core:hasPatternName rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#contains
+:contains rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#hasAttribute
+:hasAttribute rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#hasGeometry
+:hasGeometry rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#hasValue
+:hasValue rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#isAdjacentTo
+:isAdjacentTo rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#spatialRelations
+:spatialRelations rdf:type owl:ObjectProperty .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#spatiallyRelated
+:spatiallyRelated rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Attribute
+:Attribute rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Cell
+:Cell rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Feature
+:Feature rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Geometry
+:Geometry rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Provenance
+:Provenance rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Quantity
+:Quantity rdf:type owl:Class .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/cell-relations#Region
+:Region rdf:type owl:Class .
+
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
