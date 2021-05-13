@@ -303,6 +303,12 @@ def generate_examples(g):
 	examples += "\n"
 	return examples
 
+def generate_remarks(g):
+	pass
+
+def generate_known_issues(g):
+	pass
+
 # ======================
 # Set up
 section_generators = [generate_overview, generate_cqs, generate_usecases, generate_formalization, generate_submodules, generate_views, generate_entanglements, generate_examples]
