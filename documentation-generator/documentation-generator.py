@@ -29,7 +29,7 @@ forall = "\\forall "
 exists = "\\exists "
 minz   = "\\lte 0"
 func   = "\\lte 1"
-inv    = "$^-$"
+inv    = "^-"
 
 # =======================
 # Generate figure code
@@ -50,7 +50,7 @@ def generate_figure_code(filename, caption="Empty Caption", label=None):
 	figure_lines.append("  \\end{center}")
 	figure_lines.append("  \\caption{}".format(caption))
 	figure_lines.append("  \\label{}".format(label))
-	figure_lines.append("\\end{figure}")
+	figure_lines.append("\\end{figure}\n")
 	# Separate by new lines
 	figure = '\n'.join(figure_lines)
 	# And return
@@ -298,7 +298,7 @@ def generate_examples(g):
 	# Insert Text
 	examples += "\\begin{verbatim}\n"
 	examples += "Example Triples\n"
-	examples += "\\end{verbatim}"
+	examples += "\\end{verbatim}\n"
 	# End subsection
 	examples += "\n"
 	return examples
