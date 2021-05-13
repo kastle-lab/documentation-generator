@@ -149,20 +149,17 @@ def generate_usecases(g):
 			scenarios_is_empty = False
 			first = False
 			usecases += "These are the usecases!\n"
-			usecases += "\n"
 
 		usecase = str(o)
 		title, *text = usecase.split("\n")
 		text = "\n".join(text)
-		usecases += "\\subsubsection{" + title + "}\n"
+		usecases += "\n\\subsubsection{" + title + "}\n"
 		usecases += text + "\n"
-		usecases += "\n"
-
+	# This is down here because the scenarios is actually a generator
+	# not an iterable, thus we can't check len earlier than the loop
 	if scenarios_is_empty:
 		usecases += "There are no usecases documented for this pattern."
-
 	# End subsection
-	usecases += "\n"
 	return usecases
 
 def generate_formalization(g):
@@ -221,7 +218,7 @@ def generate_formalization(g):
 	formalization += "\\begin{align}\n"
 	for axiom in axioms:
 		formalization += "  " + axiom + "\\\\\n"
-	formalization += "\\end{align}\n"
+	formalization += "\\end{align}\n\n"
 
 	formalization += "\\subsubsection{Explanations}\n"
 	formalization += "\\begin{enumerate}\n"
@@ -237,7 +234,7 @@ def generate_submodules(g):
 	# Create Header
 	submodules = generate_header("Submodules")
 	# Begin Content Generation
-	pass
+	submodules += "Submodule detection not yet supported."
 	# End subsection
 	submodules += "\n"
 	return submodules
@@ -300,7 +297,6 @@ def generate_examples(g):
 	examples += "Example Triples\n"
 	examples += "\\end{verbatim}\n"
 	# End subsection
-	examples += "\n"
 	return examples
 
 def generate_remarks(g):
