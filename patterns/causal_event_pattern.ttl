@@ -15,6 +15,7 @@
 @base <http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern> .
 
 <http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern> rdf:type owl:Ontology ;
+                                                                   opla-core:hasPatternName "Causal Event Pattern" ;
                                                                    opla-cp:addressesScenario """Direct Relief
 Hurricanes happen in Mozambique; Hurricanes disrupt sewer systems; Cholera is endemic to sub-Saharan region; Mozambique is in Sub-Saharan region; disrupted sewer systems lead to Cholera outbreaks; \"this\" Hurricane disrupted sewer systems in Mozambique; there were recent outbreaks of Cholera in Mozambique; Mozambique is experiencing a Cholera outbreak due to \"this\" Hurricane; Cholera outbreaks lead to Vaccination programs"""^^xsd:string ,
                                                                                              """Thomas Fire
@@ -41,45 +42,49 @@ Low air quality in Santa Barbara results in evacuations in Santa Barbara"""^^xsd
                                                                                                  "Which regions affected by wildfires are expected to experience heavy rain (flood risk)"^^xsd:string ,
                                                                                                  "Which residents are still evacuated from the same region where the second hurricane hit?"^^xsd:string ,
                                                                                                  "where to deliver Covid-19 supplies?"^^xsd:string ;
+                                                                   opla-sd:hasAbbreviations """STE SpatiotemporalExtent
+PCR possiblyCausesRelation"""^^xsd:string ;
                                                                    opla-sd:hasConnections """Place hasSTE STE
-Event(Concrete) hasSTE STE
+Event(Concrete) hasSTE STE existential
 Event(Concrete) affects Place
 Event(Concrete) ofType Event(Abstract)
-Event(Concrete) hasResultsInRelation ResultsInRelation
+Event(Concrete) hasResultsInRelation ResultsInRelation inverse-existential
 STE overlapsWith STE
 StateOfAffairs pertainsTo STE
 StateOfAffairs indicates Event(Concrete)
 StateOfAffairs hasConstituent Observation
-ResultsInRelation resultsIn StateOfAffairs
+ResultsInRelation resultsIn StateOfAffairs existential
 ResultsInRelation accordingToWhom Provenance
 Observation accordingToWhom Provenance
 Observation hasSTE STE
 Observation hasObservationType ObservationType
 ObservationType pertainsTo Event(Abstract)
-Event(Abstract) hasPCR PCR
-PCR resultsIn Event(Abstract)
+Event(Abstract) hasPCR PCR inverse-existential
+PCR resultsIn Event(Abstract) existential
 PCR accordingToWhom Provenance"""^^xsd:string ;
                                                                    opla-sd:hasExampleDiagramFileName "causal-event-example.pdf"^^xsd:string ;
                                                                    opla-sd:hasSchemaDiagramFileName "causal-event-pattern.pdf"^^xsd:string ;
-                                                                   dc:creator "Cogan Shimizu" ;
-                                                                   dc:creator "Pascal Hitzler" ;
-                                                                   dc:creator "Rui Zhu" ;
-                                                                   dc:creator "Dean Rehberger" ;
-                                                                   dc:creator "Lynn E. Usery" ;
-                                                                   dc:creator "Dalia Varanka" ;
-                                                                   dc:creator "Joseph Zalewski" ;
-                                                                   dc:creator "Gengchen Mai" ;
-                                                                   dc:creator "Alicia Scheill" ;
-                                                                   dc:creator "Ling Cai" ;
-                                                                   dc:creator "Lu Zhou" ;
-                                                                   dc:creator "Mark Schildhauer" ;
-                                                                   dc:creator "Krzysztof Janowicz" ;
-                                                                   opla-core:hasPatternName "Causal Event Pattern" .
-
+                                                                   dc:contributor "Alicia Scheill" ,
+                                                                                  "Dalia Varanka" ,
+                                                                                  "Dean Rehberger" ,
+                                                                                  "Gengchen Mai" ,
+                                                                                  "Krzysztof Janowicz" ,
+                                                                                  "Ling Cai" ,
+                                                                                  "Lu Zhou" ,
+                                                                                  "Lynn E. Usery" ,
+                                                                                  "Mark Schildhauer" ,
+                                                                                  "Rui Zhu" ;
+                                                                   dc:creator "Cogan Shimizu" ,
+                                                                              "Joseph Zalewski" ,
+                                                                              "Pascal Hitzler" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://ontologydesignpatterns.org/opla-core#hasPatternName
+opla-core:hasPatternName rdf:type owl:AnnotationProperty .
+
 
 ###  http://ontologydesignpatterns.org/opla-core#isNativeTo
 opla-core:isNativeTo rdf:type owl:AnnotationProperty .
@@ -112,6 +117,10 @@ opla-sd:entityPositionY rdf:type owl:AnnotationProperty ;
                         opla-core:isNativeTo :Causal_Event_Module .
 
 
+###  http://ontologydesignpatterns.org/opla-sd#hasAbbreviations
+opla-sd:hasAbbreviations rdf:type owl:AnnotationProperty .
+
+
 ###  http://ontologydesignpatterns.org/opla-sd#hasConnections
 opla-sd:hasConnections rdf:type owl:AnnotationProperty .
 
@@ -122,6 +131,10 @@ opla-sd:hasExampleDiagramFileName rdf:type owl:AnnotationProperty .
 
 ###  http://ontologydesignpatterns.org/opla-sd#hasSchemaDiagramFileName
 opla-sd:hasSchemaDiagramFileName rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
@@ -250,6 +263,10 @@ dc:creator rdf:type owl:AnnotationProperty .
 <http://knowwheregraph.com#Place> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                     owl:onProperty <http://knowwheregraph.com#hasSTE> ;
+                                                    owl:someValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://knowwheregraph.com#hasSTE> ;
                                                     owl:allValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
                                                   ] ;
                                   opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
@@ -261,6 +278,15 @@ dc:creator rdf:type owl:AnnotationProperty .
                                                    rdfs:subClassOf <http://knowwheregraph.com#EntityWithProvenance> ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://knowwheregraph.com#possiblyCauses> ;
+                                                                     owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty [ owl:inverseOf <http://knowwheregraph.com#hasPossiblyCausesRelation>
+                                                                                    ] ;
+                                                                     owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://knowwheregraph.com#possiblyCauses> ;
                                                                      owl:allValuesFrom <http://knowwheregraph.com#Event-Abstract>
                                                                    ] ;
                                                    opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
@@ -270,6 +296,15 @@ dc:creator rdf:type owl:AnnotationProperty .
 ###  http://knowwheregraph.com#ResultsInRelation
 <http://knowwheregraph.com#ResultsInRelation> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://knowwheregraph.com#EntityWithProvenance> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://knowwheregraph.com#resultsIn> ;
+                                                                owl:someValuesFrom <http://knowwheregraph.com#StateOfAffairs>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty [ owl:inverseOf <http://knowwheregraph.com#resultsIn>
+                                                                               ] ;
+                                                                owl:someValuesFrom <http://knowwheregraph.com#Event-Concrete>
+                                                              ] ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://knowwheregraph.com#resultsIn> ;
                                                                 owl:allValuesFrom <http://knowwheregraph.com#StateOfAffairs>
@@ -323,38 +358,13 @@ opla-core:Pattern rdf:type owl:Class .
                                                                                        rdfs:label "Causal Event"^^xsd:string .
 
 
-[ opla-sd:entityPositionX "150.0"^^xsd:double ;
-  opla-sd:entityPositionY "70.0"^^xsd:double ;
+[ opla-sd:entityPositionX "20.0"^^xsd:double ;
+  opla-sd:entityPositionY "20.0"^^xsd:double ;
   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
 ] .
 
-[ opla-sd:entityPositionX "50.0"^^xsd:double ;
-   opla-sd:entityPositionY "150.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
- ] .
-
-[ opla-sd:entityPositionX "160.0"^^xsd:double ;
-   opla-sd:entityPositionY "470.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
- ] .
-
-[ opla-sd:entityPositionX "650.0"^^xsd:double ;
-   opla-sd:entityPositionY "410.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
- ] .
-
-[ opla-sd:entityPositionX "450.0"^^xsd:double ;
-   opla-sd:entityPositionY "240.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
- ] .
-
-[ opla-sd:entityPositionX "440.0"^^xsd:double ;
-   opla-sd:entityPositionY "470.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
- ] .
-
 [ opla-sd:entityPositionX "180.0"^^xsd:double ;
-   opla-sd:entityPositionY "320.0"^^xsd:double ;
+   opla-sd:entityPositionY "240.0"^^xsd:double ;
    rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
@@ -364,17 +374,42 @@ opla-core:Pattern rdf:type owl:Class .
  ] .
 
 [ opla-sd:entityPositionX "180.0"^^xsd:double ;
-   opla-sd:entityPositionY "240.0"^^xsd:double ;
+   opla-sd:entityPositionY "320.0"^^xsd:double ;
    rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "20.0"^^xsd:double ;
-   opla-sd:entityPositionY "20.0"^^xsd:double ;
+[ opla-sd:entityPositionX "50.0"^^xsd:double ;
+   opla-sd:entityPositionY "150.0"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ opla-sd:entityPositionX "150.0"^^xsd:double ;
+   opla-sd:entityPositionY "70.0"^^xsd:double ;
    rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
 [ opla-sd:entityPositionX "660.0"^^xsd:double ;
    opla-sd:entityPositionY "70.0"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ opla-sd:entityPositionX "440.0"^^xsd:double ;
+   opla-sd:entityPositionY "470.0"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ opla-sd:entityPositionX "450.0"^^xsd:double ;
+   opla-sd:entityPositionY "240.0"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ opla-sd:entityPositionX "650.0"^^xsd:double ;
+   opla-sd:entityPositionY "410.0"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ opla-sd:entityPositionX "160.0"^^xsd:double ;
+   opla-sd:entityPositionY "470.0"^^xsd:double ;
    rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 

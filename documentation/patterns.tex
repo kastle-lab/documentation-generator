@@ -3,6 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We list the individual modules of the ontology, together with their axioms and explanations thereof. Each axiom is listed only once (for now), i.e. some axioms pertaining to a module may be found in the axiom set listed for an earlier listed module. Schema diagrams are provided throughout, but the reader should keep in mind that while schema diagrams are very useful for understanding an ontology \cite{odp-documentation}, they are also inherently ambiguous.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Causal Event Pattern}
 \label{fig:causal-event-pattern}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,12 +73,14 @@ Low air quality in Santa Barbara results in evacuations in Santa Barbara
   \exists \textsf{hasSTE.Place} &\sqsubseteq \textsf{STE} \\
   \textsf{Event(Concrete)} &\sqsubseteq \forall \textsf{hasSTE.STE} \\
   \exists \textsf{hasSTE.Event(Concrete)} &\sqsubseteq \textsf{STE} \\
+  \textsf{Event(Concrete)} &\sqsubseteq \exists \textsf{hasSTE.Event(Concrete)} \\
   \textsf{Event(Concrete)} &\sqsubseteq \forall \textsf{affects.Place} \\
   \exists \textsf{affects.Event(Concrete)} &\sqsubseteq \textsf{Place} \\
   \textsf{Event(Concrete)} &\sqsubseteq \forall \textsf{ofType.Event(Abstract)} \\
   \exists \textsf{ofType.Event(Concrete)} &\sqsubseteq \textsf{Event(Abstract)} \\
   \textsf{Event(Concrete)} &\sqsubseteq \forall \textsf{hasResultsInRelation.ResultsInRelation} \\
   \exists \textsf{hasResultsInRelation.Event(Concrete)} &\sqsubseteq \textsf{ResultsInRelation} \\
+  \textsf{ResultsInRelation} &\sqsubseteq \exists \textsf{hasResultsInRelation}^-\textsf{.ResultsInRelation} \\
   \textsf{STE} &\sqsubseteq \forall \textsf{overlapsWith.STE} \\
   \exists \textsf{overlapsWith.STE} &\sqsubseteq \textsf{STE} \\
   \textsf{StateOfAffairs} &\sqsubseteq \forall \textsf{pertainsTo.STE} \\
@@ -88,6 +91,7 @@ Low air quality in Santa Barbara results in evacuations in Santa Barbara
   \exists \textsf{hasConstituent.StateOfAffairs} &\sqsubseteq \textsf{Observation} \\
   \textsf{ResultsInRelation} &\sqsubseteq \forall \textsf{resultsIn.StateOfAffairs} \\
   \exists \textsf{resultsIn.ResultsInRelation} &\sqsubseteq \textsf{StateOfAffairs} \\
+  \textsf{ResultsInRelation} &\sqsubseteq \exists \textsf{resultsIn.ResultsInRelation} \\
   \textsf{ResultsInRelation} &\sqsubseteq \forall \textsf{accordingToWhom.Provenance} \\
   \exists \textsf{accordingToWhom.ResultsInRelation} &\sqsubseteq \textsf{Provenance} \\
   \textsf{Observation} &\sqsubseteq \forall \textsf{accordingToWhom.Provenance} \\
@@ -100,14 +104,57 @@ Low air quality in Santa Barbara results in evacuations in Santa Barbara
   \exists \textsf{pertainsTo.ObservationType} &\sqsubseteq \textsf{Event(Abstract)} \\
   \textsf{Event(Abstract)} &\sqsubseteq \forall \textsf{hasPCR.PCR} \\
   \exists \textsf{hasPCR.Event(Abstract)} &\sqsubseteq \textsf{PCR} \\
+  \textsf{PCR} &\sqsubseteq \exists \textsf{hasPCR}^-\textsf{.PCR} \\
   \textsf{PCR} &\sqsubseteq \forall \textsf{resultsIn.Event(Abstract)} \\
   \exists \textsf{resultsIn.PCR} &\sqsubseteq \textsf{Event(Abstract)} \\
+  \textsf{PCR} &\sqsubseteq \exists \textsf{resultsIn.PCR} \\
   \textsf{PCR} &\sqsubseteq \forall \textsf{accordingToWhom.Provenance} \\
   \exists \textsf{accordingToWhom.PCR} &\sqsubseteq \textsf{Provenance} \\
 \end{align}
 \subsubsection{Explanations}
-\begin{align}
-\end{align}
+\begin{enumerate}
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Existential
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Inverse Existential
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Existential
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Scoped Range
+  \item Scoped Domain
+  \item Inverse Existential
+  \item Scoped Range
+  \item Scoped Domain
+  \item Existential
+  \item Scoped Range
+  \item Scoped Domain
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Submodules}
@@ -119,13 +166,13 @@ Low air quality in Santa Barbara results in evacuations in Santa Barbara
 \subsection{Views}
 \label{ssec:views}
 %%%%%%%%%%
-
+There are no views documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Entanglements}
 \label{ssec:entanglements}
 %%%%%%%%%%
-
+There are no entanglements documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Examples}
@@ -145,6 +192,7 @@ Example Triples
 %%%%%%%%%%% End Section %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cell Relations Pattern}
 \label{fig:cell-relations-pattern}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,25 +201,23 @@ Example Triples
 %%%%%%%%%%
 I am the overview.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Competency Questions}
 \label{ssec:cqs}
 %%%%%%%%%%
-There are no competency questions listed.
+There are no competency questions documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Use Cases}
 \label{ssec:use-cases}
 %%%%%%%%%%
-There are no usecases listed.
+There are no usecases documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Formalization}
 \label{ssec:formalization}
 %%%%%%%%%%
-There is currently no formalization.
+There is currently no formalization documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Submodules}
@@ -183,21 +229,19 @@ There is currently no formalization.
 \subsection{Views}
 \label{ssec:views}
 %%%%%%%%%%
-
+There are no views documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Entanglements}
 \label{ssec:entanglements}
 %%%%%%%%%%
-
+There are no entanglements documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Examples}
 \label{ssec:examples}
 %%%%%%%%%%
-\begin{verbatim}
-Example Triples
-\end{verbatim}
+There are no examples documented for this pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% End Section %%%%%%%%%%%

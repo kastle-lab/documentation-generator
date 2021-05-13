@@ -29,6 +29,7 @@ forall = "\\forall "
 exists = "\\exists "
 minz   = "\\lte 0"
 func   = "\\lte 1"
+inv    = "$^-$"
 
 # =======================
 # Generate figure code
@@ -82,19 +83,22 @@ def generate_overview(g):
 	# =======================
 	# Insert Overview Text
 	overview += "I am the overview.\n"
-	
-	overview += "\n"
 	# End Overview Text
 	# =======================
 	# Insert top level schema Diagram
 	# Find if there is a schema diagram
 	# get node representing this ontology
 	# get predicate for schema diagram file name
+	# TODO: this currently assumes there is only 1 schema diagram
 	hSDF = get_predicate("opla-sd", "hasSchemaDiagramFileName", g)
-	for s, p, o in g.triples((None, hSDF, None)):
+	schema_diagram = [str(o) for s,p,o in g.triples((None, hSDF, None))]
+	if len(schema_diagram) == 0:
+		return overview
+
+	for o in schema_diagram:
 		filename = str(o)
 		figure_code = generate_figure_code(filename,label="ov")
-		overview += figure_code
+		overview += "\n" + figure_code
 
 	# End subsection
 	overview += "\n"
@@ -111,7 +115,7 @@ def generate_cqs(g):
 	# Now for each triple in the pattern, get the competency question
 	# Note: g.triples() does not guarantee order
 	if len(questions) == 0: 
-		cqs += "There are no competency questions listed."
+		cqs += "There are no competency questions documented for this pattern."
 		cqs += "\n"
 		return cqs
 	
@@ -155,7 +159,7 @@ def generate_usecases(g):
 		usecases += "\n"
 
 	if scenarios_is_empty:
-		usecases += "There are no usecases listed."
+		usecases += "There are no usecases documented for this pattern."
 
 	# End subsection
 	usecases += "\n"
@@ -173,26 +177,45 @@ def generate_formalization(g):
 		connections = str(o)
 
 	if connections is None:
-		formalization += "There is currently no formalization."
+		formalization += "There is currently no formalization documented for this pattern."
 		formalization += "\n"
 		return formalization
 
 	axioms = list()
+	explanations = list()
 	lines = o.split("\n")
 	for line in lines:
-		s, p, o = line.strip().split(" ")
+		s, p, o, *args= line.strip().split(" ")
 
 		# Write Scoped Range
 		lhs = tsf(s)
 		rhs = forall + tsf(p + "." + o)
 		scoped_range = lhs + sc + rhs
 		axioms.append(scoped_range)
+		explanations.append("Scoped Range")
 
 		# Write Scoped Domain
 		lhs = exists + tsf(p + "." + s)
 		rhs = tsf(o)
 		scoped_domain = lhs + sc + rhs
 		axioms.append(scoped_domain)
+		explanations.append("Scoped Domain")
+
+		if len(args) > 0:
+			for arg in args:
+				if arg == "existential":
+					lhs = tsf(s)
+					rhs = exists + tsf(p + "." + s)
+					existential = lhs + sc + rhs
+					axioms.append(existential)
+					explanations.append("Existential")
+				elif arg == "inverse-existential":
+					lhs = tsf(o)
+					# rhs = exists + tsf(p) + inv + tsf("." + o)
+					rhs = exists + tsf(p)[:-1]+"^-" + tsf("." + o)
+					inverse_existential = lhs + sc + rhs
+					axioms.append(inverse_existential)
+					explanations.append("Inverse Existential")
 
 	formalization += "\\subsubsection{Axioms}\n"
 	formalization += "\\begin{align}\n"
@@ -201,9 +224,10 @@ def generate_formalization(g):
 	formalization += "\\end{align}\n"
 
 	formalization += "\\subsubsection{Explanations}\n"
-	formalization += "\\begin{align}\n"
-	
-	formalization += "\\end{align}"
+	formalization += "\\begin{enumerate}\n"
+	for explanation in explanations:
+		formalization += "  \\item " + explanation + "\n" 
+	formalization += "\\end{enumerate}"
 
 	# End subsection
 	formalization += "\n"
@@ -222,7 +246,21 @@ def generate_views(g):
 	# Create Header
 	views = generate_header("Views")
 	# Begin Content Generation
-	pass
+	
+	hSF = get_predicate("opla-core", "hasShortcutFor", g)
+	shortcuts = [str(o) for s,p,o in g.triples((None, hSF, None))]
+	if len(shortcuts) == 0:
+		views += "There are no views documented for this pattern."
+		views += "\n"
+		return views
+
+	hSD = get_predicate("opla-sd", "hasShortcutDiagramFileName", g)
+	shortcut_diagrams = [str(o) for s,p,o in g.triples((None, hSD, None))]
+	# There should only be one at this stage. 
+	# TODO: retool annotations to link specific shortcuts with a specific view
+	for shortcut_diagram in shortcut_diagrams:
+		figure_code = generate_figure_code(shortcut_diagram)
+		views += figure_code
 	# End subsection
 	views += "\n"
 	return views
@@ -231,7 +269,12 @@ def generate_entanglements(g):
 	# Create Header
 	entanglements = generate_header("Entanglements")
 	# Begin Content Generation
-	pass
+	hE = get_predicate("opla-core", "hasEntanglement", g)
+	ents = [str(o) for s,p,o in g.triples((None, hE, None))]
+	if len(ents) == 0:
+		entanglements += "There are no entanglements documented for this pattern."
+		entanglements += "\n"
+		return entanglements
 	# End subsection
 	entanglements += "\n"
 	return entanglements
@@ -242,8 +285,14 @@ def generate_examples(g):
 	# Begin Content Generation
 	# Insert Example figure
 	hEDF = get_predicate("opla-sd", "hasExampleDiagramFileName", g)
-	for s, p, o in g.triples((None, hEDF, None)):
-		filename = str(o)
+	example_diagrams = [str(o) for s,p,o in g.triples((None, hEDF, None))]
+	if len(example_diagrams) == 0:
+		examples += "There are no examples documented for this pattern."
+		examples += "\n"
+		return examples
+
+	for example_diagram in example_diagrams:
+		filename = example_diagram
 		figure_code = generate_figure_code(filename,label="ov")
 		examples += figure_code
 	# Insert Text
@@ -342,6 +391,7 @@ def generate_pattern_documentation(section_order, filename):
 		documentation += section_generator_map[section](g) + "\n"
 
 	with open("../documentation/patterns.tex", "a") as output:
+		output.write("%"*35+"\n")
 		output.write("\\section{" + pattern_name + "}\n")
 		output.write("\\label{fig:" + generate_label(pattern_name) + "}\n")
 		output.write(documentation)
