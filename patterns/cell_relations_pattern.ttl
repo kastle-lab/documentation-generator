@@ -20,24 +20,16 @@
 Use Case Description"""^^xsd:string ;
                                                             opla-cp:hasCompetencyQuestion "cq1"^^xsd:string ,
                                                                                           "cq2"^^xsd:string ;
-                                                            opla-sd:hasConnections """Place hasSTE STE
-Event(Concrete) hasSTE STE existential
-Event(Concrete) affects Place
-Event(Concrete) ofType Event(Abstract)
-Event(Concrete) hasResultsInRelation ResultsInRelation inverse-existential
-STE overlapsWith STE
-StateOfAffairs pertainsTo STE
-StateOfAffairs indicates Event(Concrete)
-StateOfAffairs hasConstituent Observation
-ResultsInRelation resultsIn StateOfAffairs existential
-ResultsInRelation accordingToWhom Provenance
-Observation accordingToWhom Provenance
-Observation hasSTE STE
-Observation hasObservationType ObservationType
-ObservationType pertainsTo Event(Abstract)
-Event(Abstract) hasPCR PCR inverse-existential
-PCR resultsIn Event(Abstract) existential
-PCR accordingToWhom Provenance"""^^xsd:string ;
+                                                            opla-sd:hasConnections """Cell isAdjacentTo Cell
+Cell contains Cell
+Cell spatialRelations Geometry
+Cell subclass Geometry
+Feature hasGeometry Geometry existential
+Feature hasAttribute Attribute
+Region hasGeometry Geometry existential 
+Region hasAttribute Attribute
+Attribute hasValue Quantity existential
+Attribute subclass Provenance"""^^xsd:string ;
                                                                    opla-sd:hasExampleDiagramFileName "cell-relations-example.pdf"^^xsd:string ;
                                                                    opla-sd:hasSchemaDiagramFileName "cell-relations-pattern.pdf"^^xsd:string ;
                                                                    opla-sd:hasShortcutDiagramFileName "cell-relations-shortcuts.pdf"^^xsd:string ;
