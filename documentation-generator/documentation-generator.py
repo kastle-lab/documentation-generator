@@ -39,6 +39,8 @@ def generate_figure_code(filename, caption="Empty Caption", label=None):
 	# Generate the label
 	if label == None:
 		label = get_label(filename)
+	if label.startswith("fig:"):
+		label = label.replace("fig:","")
 	label = "{fig:" + label + "}"
 	# Wrap Caption
 	caption = "{" + caption + "}"
@@ -97,7 +99,8 @@ def generate_overview(g):
 
 	for o in schema_diagram:
 		filename = str(o)
-		figure_code = generate_figure_code(filename,label="ov")
+		caption = "The schema diagram for this pattern."
+		figure_code = generate_figure_code(filename, caption, label="ov-diagram")
 		overview += "\n" + figure_code
 
 	# End subsection
@@ -256,7 +259,8 @@ def generate_views(g):
 	# There should only be one at this stage. 
 	# TODO: retool annotations to link specific shortcuts with a specific view
 	for shortcut_diagram in shortcut_diagrams:
-		figure_code = generate_figure_code(shortcut_diagram)
+		caption = "Schema diagram displaying shortcuts for this pattern (red arrows)."
+		figure_code = generate_figure_code(shortcut_diagram, caption,label="sc-diagram")
 		views += figure_code
 	# End subsection
 	views += "\n"
@@ -290,7 +294,8 @@ def generate_examples(g):
 
 	for example_diagram in example_diagrams:
 		filename = example_diagram
-		figure_code = generate_figure_code(filename,label="ov")
+		caption = "An example ``instantiation'' of the pattern in schema diagram form."
+		figure_code = generate_figure_code(filename, caption, label="ex-diagram")
 		examples += figure_code
 	# Insert Text
 	examples += "\\begin{verbatim}\n"
@@ -395,7 +400,7 @@ def generate_pattern_documentation(section_order, filename):
 	with open("../documentation/patterns.tex", "a") as output:
 		output.write("%"*35+"\n")
 		output.write("\\section{" + pattern_name + "}\n")
-		output.write("\\label{fig:" + generate_label(pattern_name) + "}\n")
+		output.write("\\label{sec:" + generate_label(pattern_name) + "}\n")
 		output.write(documentation)
 		output.write("%"*35+"\n")
 		output.write("%"*11 + " End Section "+ "%"*11+"\n")
