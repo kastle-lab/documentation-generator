@@ -220,7 +220,9 @@ def generate_formalization(g):
 	formalization += "\\subsubsection{Axioms}\n"
 	formalization += "\\begin{align}\n"
 	for axiom in axioms:
-		formalization += "  " + axiom + "\\\\\n"
+		formalization += "  " + axiom
+		if axiom != axioms[-1]:
+			formalization += "\\\\\n"
 	formalization += "\\end{align}\n\n"
 
 	formalization += "\\subsubsection{Explanations}\n"
