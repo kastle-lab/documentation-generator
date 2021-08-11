@@ -187,6 +187,14 @@ def generate_formalization(g):
 	for line in lines:
 		s, p, o, *args= line.strip().split(" ")
 
+		if p == "subclass":
+			lhs = tsf(s)
+			rhs = tsf(o)
+			subclass = lhs + sc + rhs
+			axioms.appen(subclass)
+			explanations.append ("Subclass")
+			continue
+
 		# Write Scoped Range
 		lhs = tsf(s)
 		rhs = forall + tsf(p + "." + o)
