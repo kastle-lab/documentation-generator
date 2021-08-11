@@ -30,22 +30,22 @@ Region hasGeometry Geometry existential
 Region hasAttribute Attribute
 Attribute hasValue Quantity existential
 Attribute subclass Provenance"""^^xsd:string ;
-                                                                   opla-sd:hasExampleDiagramFileName "cell-relations-example.pdf"^^xsd:string ;
-                                                                   opla-sd:hasSchemaDiagramFileName "cell-relations-pattern.pdf"^^xsd:string ;
-                                                                   opla-sd:hasShortcutDiagramFileName "cell-relations-shortcuts.pdf"^^xsd:string ;
-                                                                   dc:contributor "Alicia Scheill" ,
-                                                                                  "Dalia Varanka" ,
-                                                                                  "Dean Rehberger" ,
-                                                                                  "Gengchen Mai" ,
-                                                                                  "Krzysztof Janowicz" ,
-                                                                                  "Ling Cai" ,
-                                                                                  "Lu Zhou" ,
-                                                                                  "Lynn E. Usery" ,
-                                                                                  "Mark Schildhauer" ,
-                                                                                  "Rui Zhu" ;
-                                                                   dc:creator "Cogan Shimizu" ,
-                                                                              "Joseph Zalewski" ,
-                                                                              "Pascal Hitzler" .
+                                                            opla-core:hasShortcutFor """spatiallyRelated spatialRelations hasGeometry$^-$"""^^xsd:string ;
+                                                            opla-sd:hasSchemaDiagramFileName "cell-relations-pattern.pdf"^^xsd:string ;
+                                                            opla-sd:hasShortcutDiagramFileName "cell-relations-shortcuts.pdf"^^xsd:string ;
+                                                            dc:contributor "Alicia Scheill" ,
+                                                                           "Dalia Varanka" ,
+                                                                           "Dean Rehberger" ,
+                                                                           "Gengchen Mai" ,
+                                                                           "Krzysztof Janowicz" ,
+                                                                           "Ling Cai" ,
+                                                                           "Lu Zhou" ,
+                                                                           "Lynn E. Usery" ,
+                                                                           "Mark Schildhauer" ,
+                                                                           "Rui Zhu" ;
+                                                            dc:creator "Cogan Shimizu" ,
+                                                                       "Joseph Zalewski" ,
+                                                                       "Pascal Hitzler" .
 
 #################################################################
 #    Annotation properties
