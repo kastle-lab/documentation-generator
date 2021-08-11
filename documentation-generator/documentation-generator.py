@@ -79,6 +79,10 @@ def generate_header(section_name, label=None):
 # =======================
 # Subsection generators
 def generate_overview(g):
+	# Pattern name
+	hPN = get_predicate("opla-core", "hasPatternName", g)
+	# There should only ever be one....
+	pattern_name = [str(o) for s,p,o in g.triples((None, hPN, None))][0]
 	# Create Header
 	overview = generate_header("Overview")
 	# Begin Content Generation
@@ -99,7 +103,7 @@ def generate_overview(g):
 
 	for o in schema_diagram:
 		filename = str(o)
-		caption = "The schema diagram for this pattern."
+		caption = f"The schema diagram for the {pattern_name}."
 		figure_code = generate_figure_code(filename, caption, label="ov-diagram")
 		overview += "\n" + figure_code
 
@@ -165,25 +169,11 @@ def generate_usecases(g):
 	# End subsection
 	return usecases
 
-def generate_formalization(g):
-	# Create Header
-	formalization = generate_header("Formalization")
-	# Begin Content Generation
-	hC = get_predicate("opla-sd", "hasConnections", g)
-	connections = None
-
-	# There should only ever be one of these
-	for s, p, o in g.triples((None, hC, None)):
-		connections = str(o)
-
-	if connections is None:
-		formalization += "There is currently no formalization documented for this pattern."
-		formalization += "\n"
-		return formalization
-
+def generate_axiomatization(lines):
+	axiomatization = "" # string for holding the axiomatization and explanations
 	axioms = list()
 	explanations = list()
-	lines = o.split("\n")
+
 	for line in lines:
 		s, p, o, *args= line.strip().split(" ")
 
@@ -191,7 +181,7 @@ def generate_formalization(g):
 			lhs = tsf(s)
 			rhs = tsf(o)
 			subclass = lhs + sc + rhs
-			axioms.appen(subclass)
+			axioms.append(subclass)
 			explanations.append ("Subclass")
 			continue
 
@@ -225,19 +215,40 @@ def generate_formalization(g):
 					axioms.append(inverse_existential)
 					explanations.append("Inverse Existential")
 
-	formalization += "\\subsubsection{Axioms}\n"
-	formalization += "\\begin{align}\n"
+	axiomatization += "\\subsubsection{Axioms}\n"
+	axiomatization += "\\begin{align}\n"
 	for axiom in axioms:
-		formalization += "  " + axiom
+		axiomatization += "  " + axiom
 		if axiom != axioms[-1]:
-			formalization += "\\\\\n"
-	formalization += "\\end{align}\n\n"
+			axiomatization += "\\\\\n"
+	axiomatization += "\\end{align}\n\n"
 
-	formalization += "\\subsubsection{Explanations}\n"
-	formalization += "\\begin{enumerate}\n"
+	axiomatization += "\\subsubsection{Explanations}\n"
+	axiomatization += "\\begin{enumerate}\n"
 	for explanation in explanations:
-		formalization += "  \\item " + explanation + "\n" 
-	formalization += "\\end{enumerate}"
+		axiomatization += "  \\item " + explanation + "\n" 
+	axiomatization += "\\end{enumerate}"
+
+	return axiomatization
+
+def generate_formalization(g):
+	# Create Header
+	formalization = generate_header("Formalization")
+	# Begin Content Generation
+	hC = get_predicate("opla-sd", "hasConnections", g)
+	connections = None
+
+	# There should only ever be one of these
+	for s, p, o in g.triples((None, hC, None)):
+		connections = str(o)
+
+	if connections is None:
+		formalization += "There is currently no formalization documented for this pattern."
+		formalization += "\n"
+		return formalization
+
+	lines = o.split("\n")
+	formalization += generate_axiomatization(lines)
 
 	# End subsection
 	formalization += "\n"
@@ -253,27 +264,44 @@ def generate_submodules(g):
 	return submodules
 
 def generate_views(g):
+	# Pattern name
+	hPN = get_predicate("opla-core", "hasPatternName", g)
+	# There should only ever be one....
+	pattern_name = [str(o) for s,p,o in g.triples((None, hPN, None))][0]
 	# Create Header
 	views = generate_header("Views")
 	# Begin Content Generation
+	## Generate Figure
+	hSD = get_predicate("opla-sd", "hasShortcutDiagramFileName", g)
+	shortcut_diagrams = [str(o) for s,p,o in g.triples((None, hSD, None))]
+	# There should only be one at this stage. 
+	# TODO: retool annotations to link specific shortcuts with a specific view
+	for shortcut_diagram in shortcut_diagrams:
+		caption = f"Schema diagram displaying shortcuts for {pattern_name} (red arrows)."
+		figure_code = generate_figure_code(shortcut_diagram, caption, label="sc-diagram")
+		views += figure_code
 	
 	hSF = get_predicate("opla-core", "hasShortcutFor", g)
 	shortcuts = [str(o) for s,p,o in g.triples((None, hSF, None))]
 	if len(shortcuts) == 0:
 		views += "There are no views documented for this pattern."
 		views += "\n"
-		return views
+	else:
+		views += "The shortcuts are as follows."
+		views += "\\begin{align}\n"
+		for shortcut in shortcuts:
+			preds = shortcut.split(" ")
+			lhs = [tsf(p) for p in preds[:-1]]
+			rhs = tsf(preds[-1])
 
-	hSD = get_predicate("opla-sd", "hasShortcutDiagramFileName", g)
-	shortcut_diagrams = [str(o) for s,p,o in g.triples((None, hSD, None))]
-	# There should only be one at this stage. 
-	# TODO: retool annotations to link specific shortcuts with a specific view
-	for shortcut_diagram in shortcut_diagrams:
-		caption = "Schema diagram displaying shortcuts for this pattern (red arrows)."
-		figure_code = generate_figure_code(shortcut_diagram, caption,label="sc-diagram")
-		views += figure_code
+			shortcut_string = " \\circ ".join(lhs) + sc + rhs
+			if shortcut != shortcuts[-1]:
+				shortcut_string += "\n"
+			views += shortcut_string
+		views += "\\end{align}\n"
 	# End subsection
 	views += "\n"
+
 	return views
 
 def generate_entanglements(g):
@@ -291,6 +319,10 @@ def generate_entanglements(g):
 	return entanglements
 
 def generate_examples(g):
+	# Pattern name
+	hPN = get_predicate("opla-core", "hasPatternName", g)
+	# There should only ever be one....
+	pattern_name = [str(o) for s,p,o in g.triples((None, hPN, None))][0]
 	# Create Header
 	examples = generate_header("Examples")
 	# Begin Content Generation
@@ -304,7 +336,7 @@ def generate_examples(g):
 
 	for example_diagram in example_diagrams:
 		filename = example_diagram
-		caption = "An example ``instantiation'' of the pattern in schema diagram form."
+		caption = f"An example ``instantiation'' of the {pattern_name} in schema diagram form."
 		figure_code = generate_figure_code(filename, caption, label="ex-diagram")
 		examples += figure_code
 	# Insert Text
