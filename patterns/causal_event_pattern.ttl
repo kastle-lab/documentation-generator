@@ -102,21 +102,6 @@ opla-cp:addressesScenario rdf:type owl:AnnotationProperty .
 opla-cp:hasCompetencyQuestion rdf:type owl:AnnotationProperty .
 
 
-###  http://ontologydesignpatterns.org/opla-sd#entityPosition
-opla-sd:entityPosition rdf:type owl:AnnotationProperty ;
-                       opla-core:isNativeTo :Causal_Event_Module .
-
-
-###  http://ontologydesignpatterns.org/opla-sd#entityPositionX
-opla-sd:entityPositionX rdf:type owl:AnnotationProperty ;
-                        opla-core:isNativeTo :Causal_Event_Module .
-
-
-###  http://ontologydesignpatterns.org/opla-sd#entityPositionY
-opla-sd:entityPositionY rdf:type owl:AnnotationProperty ;
-                        opla-core:isNativeTo :Causal_Event_Module .
-
-
 ###  http://ontologydesignpatterns.org/opla-sd#hasAbbreviations
 opla-sd:hasAbbreviations rdf:type owl:AnnotationProperty .
 
@@ -145,193 +130,64 @@ dc:creator rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://knowwheregraph.com#affects
-<http://knowwheregraph.com#affects> rdf:type owl:ObjectProperty ;
-                                    opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#affects
+:affects rdf:type owl:ObjectProperty ;
+         opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#hasConstituent
-<http://knowwheregraph.com#hasConstituent> rdf:type owl:ObjectProperty ;
-                                           opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#hasConstituent
+:hasConstituent rdf:type owl:ObjectProperty ;
+                opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#hasObservationType
-<http://knowwheregraph.com#hasObservationType> rdf:type owl:ObjectProperty ;
-                                               opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#hasObservationType
+:hasObservationType rdf:type owl:ObjectProperty ;
+                    opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#hasPossiblyCausesRelation
-<http://knowwheregraph.com#hasPossiblyCausesRelation> rdf:type owl:ObjectProperty ;
-                                                      opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#hasPossiblyCausesRelation
+:hasPossiblyCausesRelation rdf:type owl:ObjectProperty ;
+                           opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#hasResultsInRelation
-<http://knowwheregraph.com#hasResultsInRelation> rdf:type owl:ObjectProperty ;
-                                                 opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#hasResultsInRelation
+:hasResultsInRelation rdf:type owl:ObjectProperty ;
+                      opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#hasSTE
-<http://knowwheregraph.com#hasSTE> rdf:type owl:ObjectProperty ;
-                                   opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#hasSTE
+:hasSTE rdf:type owl:ObjectProperty ;
+        opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#occursOver
-<http://knowwheregraph.com#occursOver> rdf:type owl:ObjectProperty ;
-                                       opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#occursOver
+:occursOver rdf:type owl:ObjectProperty ;
+            opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#ofType
-<http://knowwheregraph.com#ofType> rdf:type owl:ObjectProperty ;
-                                   opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#ofType
+:ofType rdf:type owl:ObjectProperty ;
+        opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#pertainsTo
-<http://knowwheregraph.com#pertainsTo> rdf:type owl:ObjectProperty ;
-                                       opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#pertainsTo
+:pertainsTo rdf:type owl:ObjectProperty ;
+            opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#possiblyCauses
-<http://knowwheregraph.com#possiblyCauses> rdf:type owl:ObjectProperty ;
-                                           opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#possiblyCauses
+:possiblyCauses rdf:type owl:ObjectProperty ;
+                opla-core:isNativeTo :Causal_Event_Module .
 
 
-###  http://knowwheregraph.com#resultsIn
-<http://knowwheregraph.com#resultsIn> rdf:type owl:ObjectProperty ;
-                                      opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#resultsIn
+:resultsIn rdf:type owl:ObjectProperty ;
+           opla-core:isNativeTo :Causal_Event_Module .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://knowwheregraph.com#EntityWithProvenance
-<http://knowwheregraph.com#EntityWithProvenance> rdf:type owl:Class ;
-                                                 opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                                 opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#Event-Abstract
-<http://knowwheregraph.com#Event-Abstract> rdf:type owl:Class ;
-                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#hasPossiblyCausesRelation> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#PossiblyCausesRelation>
-                                                           ] ;
-                                           opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                           opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#Event-Concrete
-<http://knowwheregraph.com#Event-Concrete> rdf:type owl:Class ;
-                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#affects> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#Place>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#hasResultsInRelation> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#ResultsInRelation>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#occursOver> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#ofType> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#Event-Abstract>
-                                                           ] ;
-                                           opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                           opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#Observation
-<http://knowwheregraph.com#Observation> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://knowwheregraph.com#EntityWithProvenance> ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <http://knowwheregraph.com#hasObservationType> ;
-                                                          owl:allValuesFrom <http://knowwheregraph.com#ObservationType>
-                                                        ] ;
-                                        opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                        opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#ObservationType
-<http://knowwheregraph.com#ObservationType> rdf:type owl:Class ;
-                                            opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                            opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#Place
-<http://knowwheregraph.com#Place> rdf:type owl:Class ;
-                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <http://knowwheregraph.com#hasSTE> ;
-                                                    owl:someValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <http://knowwheregraph.com#hasSTE> ;
-                                                    owl:allValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
-                                                  ] ;
-                                  opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                  opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#PossiblyCausesRelation
-<http://knowwheregraph.com#PossiblyCausesRelation> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://knowwheregraph.com#EntityWithProvenance> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://knowwheregraph.com#possiblyCauses> ;
-                                                                     owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty [ owl:inverseOf <http://knowwheregraph.com#hasPossiblyCausesRelation>
-                                                                                    ] ;
-                                                                     owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://knowwheregraph.com#possiblyCauses> ;
-                                                                     owl:allValuesFrom <http://knowwheregraph.com#Event-Abstract>
-                                                                   ] ;
-                                                   opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                                   opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#ResultsInRelation
-<http://knowwheregraph.com#ResultsInRelation> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://knowwheregraph.com#EntityWithProvenance> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://knowwheregraph.com#resultsIn> ;
-                                                                owl:someValuesFrom <http://knowwheregraph.com#StateOfAffairs>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty [ owl:inverseOf <http://knowwheregraph.com#resultsIn>
-                                                                               ] ;
-                                                                owl:someValuesFrom <http://knowwheregraph.com#Event-Concrete>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://knowwheregraph.com#resultsIn> ;
-                                                                owl:allValuesFrom <http://knowwheregraph.com#StateOfAffairs>
-                                                              ] ;
-                                              opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                              opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#SpatioTemporalExtent
-<http://knowwheregraph.com#SpatioTemporalExtent> rdf:type owl:Class ;
-                                                 opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                                 opla-sd:entityPosition [ ] .
-
-
-###  http://knowwheregraph.com#StateOfAffairs
-<http://knowwheregraph.com#StateOfAffairs> rdf:type owl:Class ;
-                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#hasConstituent> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#Observation>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://knowwheregraph.com#pertainsTo> ;
-                                                             owl:allValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent>
-                                                           ] ;
-                                           opla-core:isNativeTo <http://knowwheregraph.com#Causal_Event_Module> ;
-                                           opla-sd:entityPosition [ ] .
-
 
 ###  http://ontologydesignpatterns.org/opla-core#Module
 opla-core:Module rdf:type owl:Class .
@@ -341,15 +197,133 @@ opla-core:Module rdf:type owl:Class .
 opla-core:Pattern rdf:type owl:Class .
 
 
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#EntityWithProvenance
+:EntityWithProvenance rdf:type owl:Class ;
+                      opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#Event-Abstract
+:Event-Abstract rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasPossiblyCausesRelation ;
+                                  owl:allValuesFrom :PossiblyCausesRelation
+                                ] ;
+                opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#Event-Concrete
+:Event-Concrete rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :affects ;
+                                  owl:allValuesFrom :Place
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasResultsInRelation ;
+                                  owl:allValuesFrom :ResultsInRelation
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :occursOver ;
+                                  owl:allValuesFrom :SpatioTemporalExtent
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :ofType ;
+                                  owl:allValuesFrom :Event-Abstract
+                                ] ;
+                opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf :EntityWithProvenance ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasObservationType ;
+                               owl:allValuesFrom :ObservationType
+                             ] ;
+             opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#ObservationType
+:ObservationType rdf:type owl:Class ;
+                 opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSTE ;
+                         owl:someValuesFrom :SpatioTemporalExtent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSTE ;
+                         owl:allValuesFrom :SpatioTemporalExtent
+                       ] ;
+       opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#PossiblyCausesRelation
+:PossiblyCausesRelation rdf:type owl:Class ;
+                        rdfs:subClassOf :EntityWithProvenance ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :possiblyCauses ;
+                                          owl:someValuesFrom :Event-Abstract
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty [ owl:inverseOf :hasPossiblyCausesRelation
+                                                         ] ;
+                                          owl:someValuesFrom :Event-Abstract
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :possiblyCauses ;
+                                          owl:allValuesFrom :Event-Abstract
+                                        ] ;
+                        opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#ResultsInRelation
+:ResultsInRelation rdf:type owl:Class ;
+                   rdfs:subClassOf :EntityWithProvenance ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :resultsIn ;
+                                     owl:someValuesFrom :StateOfAffairs
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty [ owl:inverseOf :resultsIn
+                                                    ] ;
+                                     owl:someValuesFrom :Event-Concrete
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :resultsIn ;
+                                     owl:allValuesFrom :StateOfAffairs
+                                   ] ;
+                   opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#SpatioTemporalExtent
+:SpatioTemporalExtent rdf:type owl:Class ;
+                      opla-core:isNativeTo :Causal_Event_Module .
+
+
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#StateOfAffairs
+:StateOfAffairs rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasConstituent ;
+                                  owl:allValuesFrom :Observation
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :pertainsTo ;
+                                  owl:allValuesFrom :SpatioTemporalExtent
+                                ] ;
+                opla-core:isNativeTo :Causal_Event_Module .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://knowwheregraph.com#Causal_Event_Module
-<http://knowwheregraph.com#Causal_Event_Module> rdf:type owl:NamedIndividual ,
-                                                         opla-core:Module ;
-                                                opla-core:reusesPatternAsTemplate <https://archive.org/services/purl/domain/modular_ontology_design_library/causalevent> ;
-                                                opla-sd:entityPosition [ ] .
+###  http://stko-roy.geog.ucsb.edu/lod/patterns/causal-event-pattern#Causal_Event_Module
+:Causal_Event_Module rdf:type owl:NamedIndividual ,
+                              opla-core:Module ;
+                     opla-core:reusesPatternAsTemplate <https://archive.org/services/purl/domain/modular_ontology_design_library/causalevent> .
 
 
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/causalevent
@@ -358,59 +332,37 @@ opla-core:Pattern rdf:type owl:Class .
                                                                                        rdfs:label "Causal Event"^^xsd:string .
 
 
-[ opla-sd:entityPositionX "20.0"^^xsd:double ;
-  opla-sd:entityPositionY "20.0"^^xsd:double ;
-  rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
 ] .
 
-[ opla-sd:entityPositionX "180.0"^^xsd:double ;
-   opla-sd:entityPositionY "240.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "670.2917545430142"^^xsd:double ;
-   opla-sd:entityPositionY "249.86427160379844"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "180.0"^^xsd:double ;
-   opla-sd:entityPositionY "320.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "50.0"^^xsd:double ;
-   opla-sd:entityPositionY "150.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "150.0"^^xsd:double ;
-   opla-sd:entityPositionY "70.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "660.0"^^xsd:double ;
-   opla-sd:entityPositionY "70.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "440.0"^^xsd:double ;
-   opla-sd:entityPositionY "470.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "450.0"^^xsd:double ;
-   opla-sd:entityPositionY "240.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "650.0"^^xsd:double ;
-   opla-sd:entityPositionY "410.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
-[ opla-sd:entityPositionX "160.0"^^xsd:double ;
-   opla-sd:entityPositionY "470.0"^^xsd:double ;
-   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
  ] .
 
 #################################################################
@@ -418,79 +370,79 @@ opla-core:Pattern rdf:type owl:Class .
 #################################################################
 
 [ rdf:type owl:Restriction ;
-   owl:onProperty <http://knowwheregraph.com#affects> ;
-   owl:someValuesFrom <http://knowwheregraph.com#Place> ;
-   rdfs:subClassOf <http://knowwheregraph.com#Event-Concrete>
+   owl:onProperty :affects ;
+   owl:someValuesFrom :Place ;
+   rdfs:subClassOf :Event-Concrete
  ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#hasConstituent> ;
-  owl:someValuesFrom <http://knowwheregraph.com#Observation> ;
-  rdfs:subClassOf <http://knowwheregraph.com#StateOfAffairs>
+  owl:onProperty :hasConstituent ;
+  owl:someValuesFrom :Observation ;
+  rdfs:subClassOf :StateOfAffairs
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#hasObservationType> ;
-  owl:someValuesFrom <http://knowwheregraph.com#ObservationType> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Observation>
+  owl:onProperty :hasObservationType ;
+  owl:someValuesFrom :ObservationType ;
+  rdfs:subClassOf :Observation
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#hasPossiblyCausesRelation> ;
-  owl:someValuesFrom <http://knowwheregraph.com#PossiblyCausesRelation> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Event-Abstract>
+  owl:onProperty :hasPossiblyCausesRelation ;
+  owl:someValuesFrom :PossiblyCausesRelation ;
+  rdfs:subClassOf :Event-Abstract
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#hasResultsInRelation> ;
-  owl:someValuesFrom <http://knowwheregraph.com#ResultsInRelation> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Event-Concrete>
+  owl:onProperty :hasResultsInRelation ;
+  owl:someValuesFrom :ResultsInRelation ;
+  rdfs:subClassOf :Event-Concrete
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#hasSTE> ;
-  owl:someValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Place>
+  owl:onProperty :hasSTE ;
+  owl:someValuesFrom :SpatioTemporalExtent ;
+  rdfs:subClassOf :Place
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#occursOver> ;
-  owl:someValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Event-Concrete>
+  owl:onProperty :occursOver ;
+  owl:someValuesFrom :SpatioTemporalExtent ;
+  rdfs:subClassOf :Event-Concrete
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#ofType> ;
-  owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract> ;
-  rdfs:subClassOf <http://knowwheregraph.com#Event-Concrete>
+  owl:onProperty :ofType ;
+  owl:someValuesFrom :Event-Abstract ;
+  rdfs:subClassOf :Event-Concrete
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#pertainsTo> ;
-  owl:someValuesFrom <http://knowwheregraph.com#SpatioTemporalExtent> ;
-  rdfs:subClassOf <http://knowwheregraph.com#StateOfAffairs>
+  owl:onProperty :pertainsTo ;
+  owl:someValuesFrom :SpatioTemporalExtent ;
+  rdfs:subClassOf :StateOfAffairs
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#possiblyCauses> ;
-  owl:someValuesFrom <http://knowwheregraph.com#Event-Abstract> ;
-  rdfs:subClassOf <http://knowwheregraph.com#PossiblyCausesRelation>
+  owl:onProperty :possiblyCauses ;
+  owl:someValuesFrom :Event-Abstract ;
+  rdfs:subClassOf :PossiblyCausesRelation
 ] .
 
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty <http://knowwheregraph.com#resultsIn> ;
-  owl:someValuesFrom <http://knowwheregraph.com#StateOfAffairs> ;
-  rdfs:subClassOf <http://knowwheregraph.com#ResultsInRelation>
+  owl:onProperty :resultsIn ;
+  owl:someValuesFrom :StateOfAffairs ;
+  rdfs:subClassOf :ResultsInRelation
 ] .
 
 
