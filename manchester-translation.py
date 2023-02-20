@@ -36,6 +36,8 @@ def find_axioms(path, filename):
 
         def print_axiom(s, p, o):
             
+             
+            
                   
             
             restriction = None
@@ -45,12 +47,19 @@ def find_axioms(path, filename):
                 restriction = "only"
                
             if restriction:
-                restriction_axiom = f"{replace_prefix(s)} subClassOf: {replace_prefix(on_property)} {restriction} {replace_prefix(o)}"
-                print(restriction_axiom)
-            else:
                 
-                sub_class_axiom = f"{replace_prefix(s)} subClassOf: {replace_prefix(o)}"
-                print(sub_class_axiom)
+                s = replace_prefix(s) if s else None
+                o = replace_prefix(o) if o else None
+                if s and o:
+                    restriction_axiom = f"{s} subClassOf: {replace_prefix(on_property)} {restriction} {o}"
+                    print(restriction_axiom)
+            else:
+                s = replace_prefix(s) if s else None
+                o = replace_prefix(o) if o else None
+                if s and o:
+                    sub_class_axiom = f"{s} subClassOf: {o}"
+                    print(sub_class_axiom)
+                
                 
         for s1, p1, o1 in g.triples( (None, a, OWL.Class) ):
             axioms = [triple for triple in g.triples( (s1, sco, None) )] + \
