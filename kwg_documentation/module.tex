@@ -1,0 +1,2155 @@
+\chapter{Modules}
+\label{sec:mods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We list the individual modules of the ontology, together with their axioms and explanations thereof. Each axiom is listed only once (for now), i.e. some axioms pertaining to a module may be found in the axiom set listed for an earlier listed module. Schema diagrams are provided throughout, but the reader should keep in mind that while schema diagrams are very useful for understanding an ontology \cite{odp-documentation}, they are also inherently ambiguous.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bluesky Forecast Airfire}
+\label{sec:bluesky-forecast-airfire}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/bluesky-forecast-airfire-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Bluesky Forecast Airfire.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  BlueskyModel subClassOf: Sensor\\
+  BlueskyModeledWildfire subClassOf: geo:Feature\\
+  BlueskyModeledWildfire subClassOf: FeatureOfInterest\\
+  BlueskyWildfireObservableProperty subClassOf: ObservableProperty\\
+  BlueskyWildfireObservation subClassOf: Observation\\
+  BlueskyWildfireObservationCollection subClassOf: ObservationCollection\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  BlueskyModeledWildfire subClassOf: geo:Feature\\
+  BlueskyModeledWildfire subClassOf: FeatureOfInterest\\
+  BlueskyWildfireObservableProperty subClassOf: ObservableProperty\\
+  BlueskyWildfireObservation subClassOf: Observation\\
+  BlueskyWildfireObservationCollection subClassOf: ObservationCollection\\
+  BlueskyModel subClassOf: Sensor\\
+  hasTemporalScope some time:Instant \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  observedProperty some BlueskyWildfireObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some BlueskyModeledWildfire \\
+  hasMember some BlueskyWildfireObservation \\
+  madeBySensor some BlueskyModel \\
+  phenomenonTime some time:Instant \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Soil Ssurgo Usda}
+\label{sec:soil-ssurgo-usda}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/soil-ssurgo-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Soil Ssurgo Usda.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  GeometryCollection subClassOf: geo:SpatialObject\\
+  S2Cell subClassOf: geo:SpatialObject\\
+  SoilMapUnit subClassOf: geo:Feature\\
+  SoilMapUnit subClassOf: FeatureOfInterest\\
+  SoilMapUnitObservableProperty subClassOf: ObservableProperty\\
+  SoilMapUnitObservation subClassOf: Observation\\
+  SoilMapUnitObservationCollection subClassOf: ObservationCollection\\
+  SoilMapUnitOverlapObservation subClassOf: Observation\\
+  SoilMapUnit subClassOf: geo:Feature\\
+  GeometryCollection subClassOf: geo:SpatialObject\\
+  S2Cell subClassOf: geo:SpatialObject\\
+  SoilMapUnit subClassOf: FeatureOfInterest\\
+  SoilMapUnitObservableProperty subClassOf: ObservableProperty\\
+  SoilMapUnitObservation subClassOf: Observation\\
+  SoilMapUnitOverlapObservation subClassOf: Observation\\
+  SoilMapUnitObservationCollection subClassOf: ObservationCollection\\
+  hasGeometryMember some geo:Feature \\
+  hasGeometry some GeometryCollection \\
+  observedProperty some SoilMapUnitObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some SoilMapUnit \\
+  hasMember some SoilMapUnitObservation \\
+  hasMember some SoilMapUnitOverlapObservation \\
+  hasMapUnitAreaSymbol some rdfs:Literal \\
+  hasSoilMapUnitKey some rdfs:Literal \\
+  hasSoilMapUnitSymbol some rdfs:Literal \\
+  target some S2Cell \\
+  observedProperty some SoilMapUnitObservableProperty \\
+  geo:hasGeometry some geo:Geometry \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Meta Description}
+\label{sec:meta-description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/soil-ssurgo-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Meta Description.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  GeometryCollection subClassOf: geo:SpatialObject\\
+  S2Cell subClassOf: geo:SpatialObject\\
+  SoilMapUnit subClassOf: geo:Feature\\
+  SoilMapUnit subClassOf: FeatureOfInterest\\
+  SoilMapUnitObservableProperty subClassOf: ObservableProperty\\
+  SoilMapUnitObservation subClassOf: Observation\\
+  SoilMapUnitObservationCollection subClassOf: ObservationCollection\\
+  SoilMapUnitOverlapObservation subClassOf: Observation\\
+  SoilMapUnit subClassOf: geo:Feature\\
+  GeometryCollection subClassOf: geo:SpatialObject\\
+  S2Cell subClassOf: geo:SpatialObject\\
+  SoilMapUnit subClassOf: FeatureOfInterest\\
+  SoilMapUnitObservableProperty subClassOf: ObservableProperty\\
+  SoilMapUnitObservation subClassOf: Observation\\
+  SoilMapUnitOverlapObservation subClassOf: Observation\\
+  SoilMapUnitObservationCollection subClassOf: ObservationCollection\\
+  hasGeometryMember some geo:Feature \\
+  hasGeometry some GeometryCollection \\
+  observedProperty some SoilMapUnitObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some SoilMapUnit \\
+  hasMember some SoilMapUnitObservation \\
+  hasMember some SoilMapUnitOverlapObservation \\
+  hasMapUnitAreaSymbol some rdfs:Literal \\
+  hasSoilMapUnitKey some rdfs:Literal \\
+  hasSoilMapUnitSymbol some rdfs:Literal \\
+  target some S2Cell \\
+  observedProperty some SoilMapUnitObservableProperty \\
+  geo:hasGeometry some geo:Geometry \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Federal Judicial District Doj}
+\label{sec:federal-judicial-district-doj}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/federal-judicial-district-doj-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Federal Judicial District Doj.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  FederalJudicalDistrict subClassOf: geo:Feature\\
+  FederalJudicalDistrict subClassOf: geo:Feature\\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hasJudgeInfo only JudegeInfo \\
+  inCircuit only RegionalCircuit \\
+  nominatedBy only USPresident \\
+  nominatedTime only time:TemporalEntity \\
+  geo:spatialRelation only AdministrativeRegion_3 \\
+  geo:spatialRelation only S2Cell \\
+  geo:hasName some rdfs:Literal \\
+  hasABBR some rdfs:Literal \\
+  hasChiefJudge some ChiefJudge \\
+  nominatedBy some USPresident \\
+  nominatedTime some time:TemporalEntity \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Climate Divisions Observations Noaa}
+\label{sec:climate-divisions-observations-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/climate-divisions-observations-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Climate Divisions Observations Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  Quantity subClassOf: qudt:QuantityValue\\
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  ClimateDivisionObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionObservationResult subClassOf: Result\\
+  ClimateDivisionPropertyObservationCollection subClassOf: ObservationCollection\\
+  ClimateObservableProperty subClassOf: ObservableProperty\\
+  ClimateObservation subClassOf: Observation\\
+  Quantity subClassOf: qudt:QuantityValue\\
+  AdministrativeRegion subClassOf: Region\\
+  USClimateDivision subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  USClimateDivision subClassOf: Region\\
+  USClimateDivision subClassOf: geo:Feature\\
+  USClimateDivision subClassOf: FeatureOfInterest\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  USClimateDivision subClassOf: geo:Feature\\
+  time:Duration subClassOf: time:TemporalDuration\\
+  time:Duration subClassOf: time:TemporalDuration\\
+  USClimateDivision subClassOf: FeatureOfInterest\\
+  ClimateObservableProperty subClassOf: ObservableProperty\\
+  ClimateObservation subClassOf: Observation\\
+  ClimateDivisionObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionPropertyObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionObservationResult subClassOf: Result\\
+  hasFeatureOfInterest some USClimateDivision \\
+  hasMember some ClimateDivisionPropertyObservationCollection \\
+  mean some Quantity \\
+  value some Quantity \\
+  anomaly some rdfs:Literal \\
+  rank some rdfs:Literal \\
+  hasMember some ClimateObservation \\
+  observedProperty some ClimateObservableProperty \\
+  timeScale some time:Duration \\
+  hasResult some ClimateDivisionObservationResult \\
+  hasDefaultGeometry some Geometry \\
+  geo:hasGeometry some Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  time:months some xsd:decimal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kwg Lite}
+\label{sec:kwg-lite}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/kwg-lite-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Kwg Lite.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  Quantity subClassOf: qudt:QuantityValue\\
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  ClimateDivisionObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionObservationResult subClassOf: Result\\
+  ClimateDivisionPropertyObservationCollection subClassOf: ObservationCollection\\
+  ClimateObservableProperty subClassOf: ObservableProperty\\
+  ClimateObservation subClassOf: Observation\\
+  Quantity subClassOf: qudt:QuantityValue\\
+  AdministrativeRegion subClassOf: Region\\
+  USClimateDivision subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  USClimateDivision subClassOf: Region\\
+  USClimateDivision subClassOf: geo:Feature\\
+  USClimateDivision subClassOf: FeatureOfInterest\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  USClimateDivision subClassOf: geo:Feature\\
+  time:Duration subClassOf: time:TemporalDuration\\
+  time:Duration subClassOf: time:TemporalDuration\\
+  USClimateDivision subClassOf: FeatureOfInterest\\
+  ClimateObservableProperty subClassOf: ObservableProperty\\
+  ClimateObservation subClassOf: Observation\\
+  ClimateDivisionObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionPropertyObservationCollection subClassOf: ObservationCollection\\
+  ClimateDivisionObservationResult subClassOf: Result\\
+  hasFeatureOfInterest some USClimateDivision \\
+  hasMember some ClimateDivisionPropertyObservationCollection \\
+  mean some Quantity \\
+  value some Quantity \\
+  anomaly some rdfs:Literal \\
+  rank some rdfs:Literal \\
+  hasMember some ClimateObservation \\
+  observedProperty some ClimateObservableProperty \\
+  timeScale some time:Duration \\
+  hasResult some ClimateDivisionObservationResult \\
+  hasDefaultGeometry some Geometry \\
+  geo:hasGeometry some Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  time:months some xsd:decimal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Admin Regions Gadm}
+\label{sec:admin-regions-gadm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/admin-regions-gadm-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Admin Regions Gadm.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_0 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_1 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_2 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_4 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_5 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_6 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_0 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_1 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_2 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_4 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_5 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_6 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  geo:haDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry   geo:hasGeometry only geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Drought Ndmc}
+\label{sec:drought-ndmc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/drought-ndmc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Drought Ndmc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  coversWeek only time:TemporalEntity \\
+  hasDroughtIntensity only DroughtIntensity \\
+  None only None \\
+  hasCode only rdfs:Literal \\
+  hasLabel only rdfs:Literal \\
+  coversWeek some time:TemporalEntity \\
+  hasDroughtIntensity some DroughtIntensity \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Storms Impacts Noaa}
+\label{sec:storms-impacts-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/storm-impacts-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Storms Impacts Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  Fire subClassOf: Hazard\\
+  Wildfire subClassOf: Fire\\
+  Fire subClassOf: Hazard\\
+  NOAAHazard subClassOf: Hazard\\
+  ImpactObservableProperty subClassOf: ObservableProperty\\
+  ImpactObservation subClassOf: Observation\\
+  ImpactObservationCollection subClassOf: ObservationCollection\\
+  MagnitudeObservableProperty subClassOf: ObservableProperty\\
+  MagnitudeObservation subClassOf: Observation\\
+  MagnitudeObservationCollection subClassOf: ObservationCollection\\
+  TornadoMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  WindMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  NOAAAstronomicalLowTide subClassOf: NOAAHazard\\
+  NOAAAvalanche subClassOf: NOAAHazard\\
+  NOAABlizzard subClassOf: NOAAHazard\\
+  NOAACoastalFlood subClassOf: NOAAHazard\\
+  NOAAColdWindChill subClassOf: NOAAHazard\\
+  NOAADebrisFlow subClassOf: NOAAHazard\\
+  NOAADenseFog subClassOf: NOAAHazard\\
+  NOAADenseSmoke subClassOf: NOAAHazard\\
+  NOAADrought subClassOf: NOAAHazard\\
+  NOAADustDevil subClassOf: NOAAHazard\\
+  NOAADustStorm subClassOf: NOAAHazard\\
+  NOAAExcessiveHeat subClassOf: NOAAHazard\\
+  NOAAExtremeColdWindChill subClassOf: NOAAHazard\\
+  NOAAFlashFlood subClassOf: NOAAHazard\\
+  NOAAFlood subClassOf: NOAAHazard\\
+  NOAAFreezingFog subClassOf: NOAAHazard\\
+  NOAAFrostFreeze subClassOf: NOAAHazard\\
+  NOAAFunnelCloud subClassOf: NOAAHazard\\
+  NOAAHail subClassOf: NOAAHazard\\
+  NOAAHazard subClassOf: Hazard\\
+  NOAAHazard subClassOf: geo:Feature\\
+  NOAAHazard subClassOf: FeatureOfInterest\\
+  NOAAAstronomicalLowTide subClassOf: NOAAHazard\\
+  NOAAAvalanche subClassOf: NOAAHazard\\
+  NOAABlizzard subClassOf: NOAAHazard\\
+  NOAACoastalFlood subClassOf: NOAAHazard\\
+  NOAAColdWindChill subClassOf: NOAAHazard\\
+  NOAADebrisFlow subClassOf: NOAAHazard\\
+  NOAADenseFog subClassOf: NOAAHazard\\
+  NOAADenseSmoke subClassOf: NOAAHazard\\
+  NOAADrought subClassOf: NOAAHazard\\
+  NOAADustDevil subClassOf: NOAAHazard\\
+  NOAADustStorm subClassOf: NOAAHazard\\
+  NOAAExcessiveHeat subClassOf: NOAAHazard\\
+  NOAAExtremeColdWindChill subClassOf: NOAAHazard\\
+  NOAAFlashFlood subClassOf: NOAAHazard\\
+  NOAAFlood subClassOf: NOAAHazard\\
+  NOAAFreezingFog subClassOf: NOAAHazard\\
+  NOAAFrostFreeze subClassOf: NOAAHazard\\
+  NOAAFunnelCloud subClassOf: NOAAHazard\\
+  NOAAHail subClassOf: NOAAHazard\\
+  NOAAHeat subClassOf: NOAAHazard\\
+  NOAAHeavyRain subClassOf: NOAAHazard\\
+  NOAAHeavySnow subClassOf: NOAAHazard\\
+  NOAAHighSurf subClassOf: NOAAHazard\\
+  NOAAHighWind subClassOf: NOAAHazard\\
+  NOAAHurricane subClassOf: NOAAHazard\\
+  NOAAIceStorm subClassOf: NOAAHazard\\
+  NOAALake-EffectSnow subClassOf: NOAAHazard\\
+  NOAALakeshoreFlood subClassOf: NOAAHazard\\
+  NOAALightning subClassOf: NOAAHazard\\
+  NOAAMarineHail subClassOf: NOAAHazard\\
+  NOAAMarineHighWind subClassOf: NOAAHazard\\
+  NOAAMarineHurricaneTyphoon subClassOf: NOAAHazard\\
+  NOAAMarineStrongWind subClassOf: NOAAHazard\\
+  NOAAMarineThunderstormWind subClassOf: NOAAHazard\\
+  NOAAMarineTropicalDepression subClassOf: NOAAHazard\\
+  NOAAMarineTropicalStorm subClassOf: NOAAHazard\\
+  NOAARipCurrent subClassOf: NOAAHazard\\
+  NOAASleet subClassOf: NOAAHazard\\
+  NOAASneakerwave subClassOf: NOAAHazard\\
+  NOAAStormSurgeTide subClassOf: NOAAHazard\\
+  NOAAStrongWind subClassOf: NOAAHazard\\
+  NOAAThunderstormWind subClassOf: NOAAHazard\\
+  NOAATornado subClassOf: NOAAHazard\\
+  NOAATropicalDepression subClassOf: NOAAHazard\\
+  NOAATropicalStorm subClassOf: NOAAHazard\\
+  NOAAWaterspout subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: NOAAHazard\\
+  NOAAWinterStorm subClassOf: NOAAHazard\\
+  NOAAWinterWeather subClassOf: NOAAHazard\\
+  NOAAHeat subClassOf: NOAAHazard\\
+  NOAAHeavyRain subClassOf: NOAAHazard\\
+  NOAAHeavySnow subClassOf: NOAAHazard\\
+  NOAAHighSurf subClassOf: NOAAHazard\\
+  NOAAHighWind subClassOf: NOAAHazard\\
+  NOAAHurricane subClassOf: NOAAHazard\\
+  NOAAIceStorm subClassOf: NOAAHazard\\
+  NOAALake-EffectSnow subClassOf: NOAAHazard\\
+  NOAALakeshoreFlood subClassOf: NOAAHazard\\
+  NOAALightning subClassOf: NOAAHazard\\
+  NOAAMarineHail subClassOf: NOAAHazard\\
+  NOAAMarineHighWind subClassOf: NOAAHazard\\
+  NOAAMarineHurricaneTyphoon subClassOf: NOAAHazard\\
+  NOAAMarineStrongWind subClassOf: NOAAHazard\\
+  NOAAMarineThunderstormWind subClassOf: NOAAHazard\\
+  NOAAMarineTropicalDepression subClassOf: NOAAHazard\\
+  NOAAMarineTropicalStorm subClassOf: NOAAHazard\\
+  NOAARipCurrent subClassOf: NOAAHazard\\
+  NOAASleet subClassOf: NOAAHazard\\
+  NOAASneakerwave subClassOf: NOAAHazard\\
+  NOAAStormSurgeTide subClassOf: NOAAHazard\\
+  NOAAStrongWind subClassOf: NOAAHazard\\
+  NOAAThunderstormWind subClassOf: NOAAHazard\\
+  NOAATornado subClassOf: NOAAHazard\\
+  NOAATropicalDepression subClassOf: NOAAHazard\\
+  NOAATropicalStorm subClassOf: NOAAHazard\\
+  NOAAWaterspout subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: Wildfire\\
+  NOAAWinterStorm subClassOf: NOAAHazard\\
+  NOAAWinterWeather subClassOf: NOAAHazard\\
+  NWZone subClassOf: geo:Feature\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  TornadoMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  Wildfire subClassOf: Fire\\
+  NOAAWildfire subClassOf: Wildfire\\
+  WindMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  NOAAHazard subClassOf: geo:Feature\\
+  NWZone subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  NOAAHazard subClassOf: FeatureOfInterest\\
+  ImpactObservableProperty subClassOf: ObservableProperty\\
+  MagnitudeObservableProperty subClassOf: ObservableProperty\\
+  ImpactObservation subClassOf: Observation\\
+  MagnitudeObservation subClassOf: Observation\\
+  ImpactObservationCollection subClassOf: ObservationCollection\\
+  MagnitudeObservationCollection subClassOf: ObservationCollection\\
+  endsAt some Fix \\
+  startsFrom some Fix \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hasAzimuth some rdfs:Literal \\
+  hasRange some rdfs:Literal \\
+  hasPart some NOAAHazard \\
+  hasNarrative some rdfs:Literal \\
+  observedProperty some ImpactObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some NOAAHazard \\
+  hasMember some ImpactObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  observedProperty some MagnitudeObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some NOAAHazard \\
+  hasMember some MagnitudeObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSegment some EventSegment \\
+  hasTemporalScope some time:TemporalEntity \\
+  spatialRelation some None \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  geo:asWKT only geo:wktLiteral \\
+  geo:asWKT some geo:wktLiteral \\
+  time:inXSDDateTime only xsd:dateTime \\
+  time:inXSDDateTime some xsd:dateTime \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{S2cells}
+\label{sec:s2cells}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/s2cells-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the S2cells.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  Fire subClassOf: Hazard\\
+  Wildfire subClassOf: Fire\\
+  Fire subClassOf: Hazard\\
+  NOAAHazard subClassOf: Hazard\\
+  ImpactObservableProperty subClassOf: ObservableProperty\\
+  ImpactObservation subClassOf: Observation\\
+  ImpactObservationCollection subClassOf: ObservationCollection\\
+  MagnitudeObservableProperty subClassOf: ObservableProperty\\
+  MagnitudeObservation subClassOf: Observation\\
+  MagnitudeObservationCollection subClassOf: ObservationCollection\\
+  TornadoMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  WindMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  NOAAAstronomicalLowTide subClassOf: NOAAHazard\\
+  NOAAAvalanche subClassOf: NOAAHazard\\
+  NOAABlizzard subClassOf: NOAAHazard\\
+  NOAACoastalFlood subClassOf: NOAAHazard\\
+  NOAAColdWindChill subClassOf: NOAAHazard\\
+  NOAADebrisFlow subClassOf: NOAAHazard\\
+  NOAADenseFog subClassOf: NOAAHazard\\
+  NOAADenseSmoke subClassOf: NOAAHazard\\
+  NOAADrought subClassOf: NOAAHazard\\
+  NOAADustDevil subClassOf: NOAAHazard\\
+  NOAADustStorm subClassOf: NOAAHazard\\
+  NOAAExcessiveHeat subClassOf: NOAAHazard\\
+  NOAAExtremeColdWindChill subClassOf: NOAAHazard\\
+  NOAAFlashFlood subClassOf: NOAAHazard\\
+  NOAAFlood subClassOf: NOAAHazard\\
+  NOAAFreezingFog subClassOf: NOAAHazard\\
+  NOAAFrostFreeze subClassOf: NOAAHazard\\
+  NOAAFunnelCloud subClassOf: NOAAHazard\\
+  NOAAHail subClassOf: NOAAHazard\\
+  NOAAHazard subClassOf: Hazard\\
+  NOAAHazard subClassOf: geo:Feature\\
+  NOAAHazard subClassOf: FeatureOfInterest\\
+  NOAAAstronomicalLowTide subClassOf: NOAAHazard\\
+  NOAAAvalanche subClassOf: NOAAHazard\\
+  NOAABlizzard subClassOf: NOAAHazard\\
+  NOAACoastalFlood subClassOf: NOAAHazard\\
+  NOAAColdWindChill subClassOf: NOAAHazard\\
+  NOAADebrisFlow subClassOf: NOAAHazard\\
+  NOAADenseFog subClassOf: NOAAHazard\\
+  NOAADenseSmoke subClassOf: NOAAHazard\\
+  NOAADrought subClassOf: NOAAHazard\\
+  NOAADustDevil subClassOf: NOAAHazard\\
+  NOAADustStorm subClassOf: NOAAHazard\\
+  NOAAExcessiveHeat subClassOf: NOAAHazard\\
+  NOAAExtremeColdWindChill subClassOf: NOAAHazard\\
+  NOAAFlashFlood subClassOf: NOAAHazard\\
+  NOAAFlood subClassOf: NOAAHazard\\
+  NOAAFreezingFog subClassOf: NOAAHazard\\
+  NOAAFrostFreeze subClassOf: NOAAHazard\\
+  NOAAFunnelCloud subClassOf: NOAAHazard\\
+  NOAAHail subClassOf: NOAAHazard\\
+  NOAAHeat subClassOf: NOAAHazard\\
+  NOAAHeavyRain subClassOf: NOAAHazard\\
+  NOAAHeavySnow subClassOf: NOAAHazard\\
+  NOAAHighSurf subClassOf: NOAAHazard\\
+  NOAAHighWind subClassOf: NOAAHazard\\
+  NOAAHurricane subClassOf: NOAAHazard\\
+  NOAAIceStorm subClassOf: NOAAHazard\\
+  NOAALake-EffectSnow subClassOf: NOAAHazard\\
+  NOAALakeshoreFlood subClassOf: NOAAHazard\\
+  NOAALightning subClassOf: NOAAHazard\\
+  NOAAMarineHail subClassOf: NOAAHazard\\
+  NOAAMarineHighWind subClassOf: NOAAHazard\\
+  NOAAMarineHurricaneTyphoon subClassOf: NOAAHazard\\
+  NOAAMarineStrongWind subClassOf: NOAAHazard\\
+  NOAAMarineThunderstormWind subClassOf: NOAAHazard\\
+  NOAAMarineTropicalDepression subClassOf: NOAAHazard\\
+  NOAAMarineTropicalStorm subClassOf: NOAAHazard\\
+  NOAARipCurrent subClassOf: NOAAHazard\\
+  NOAASleet subClassOf: NOAAHazard\\
+  NOAASneakerwave subClassOf: NOAAHazard\\
+  NOAAStormSurgeTide subClassOf: NOAAHazard\\
+  NOAAStrongWind subClassOf: NOAAHazard\\
+  NOAAThunderstormWind subClassOf: NOAAHazard\\
+  NOAATornado subClassOf: NOAAHazard\\
+  NOAATropicalDepression subClassOf: NOAAHazard\\
+  NOAATropicalStorm subClassOf: NOAAHazard\\
+  NOAAWaterspout subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: NOAAHazard\\
+  NOAAWinterStorm subClassOf: NOAAHazard\\
+  NOAAWinterWeather subClassOf: NOAAHazard\\
+  NOAAHeat subClassOf: NOAAHazard\\
+  NOAAHeavyRain subClassOf: NOAAHazard\\
+  NOAAHeavySnow subClassOf: NOAAHazard\\
+  NOAAHighSurf subClassOf: NOAAHazard\\
+  NOAAHighWind subClassOf: NOAAHazard\\
+  NOAAHurricane subClassOf: NOAAHazard\\
+  NOAAIceStorm subClassOf: NOAAHazard\\
+  NOAALake-EffectSnow subClassOf: NOAAHazard\\
+  NOAALakeshoreFlood subClassOf: NOAAHazard\\
+  NOAALightning subClassOf: NOAAHazard\\
+  NOAAMarineHail subClassOf: NOAAHazard\\
+  NOAAMarineHighWind subClassOf: NOAAHazard\\
+  NOAAMarineHurricaneTyphoon subClassOf: NOAAHazard\\
+  NOAAMarineStrongWind subClassOf: NOAAHazard\\
+  NOAAMarineThunderstormWind subClassOf: NOAAHazard\\
+  NOAAMarineTropicalDepression subClassOf: NOAAHazard\\
+  NOAAMarineTropicalStorm subClassOf: NOAAHazard\\
+  NOAARipCurrent subClassOf: NOAAHazard\\
+  NOAASleet subClassOf: NOAAHazard\\
+  NOAASneakerwave subClassOf: NOAAHazard\\
+  NOAAStormSurgeTide subClassOf: NOAAHazard\\
+  NOAAStrongWind subClassOf: NOAAHazard\\
+  NOAAThunderstormWind subClassOf: NOAAHazard\\
+  NOAATornado subClassOf: NOAAHazard\\
+  NOAATropicalDepression subClassOf: NOAAHazard\\
+  NOAATropicalStorm subClassOf: NOAAHazard\\
+  NOAAWaterspout subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: NOAAHazard\\
+  NOAAWildfire subClassOf: Wildfire\\
+  NOAAWinterStorm subClassOf: NOAAHazard\\
+  NOAAWinterWeather subClassOf: NOAAHazard\\
+  NWZone subClassOf: geo:Feature\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  TornadoMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  Wildfire subClassOf: Fire\\
+  NOAAWildfire subClassOf: Wildfire\\
+  WindMagnitudeObservationCollection subClassOf: MagnitudeObservationCollection\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  NOAAHazard subClassOf: geo:Feature\\
+  NWZone subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  NOAAHazard subClassOf: FeatureOfInterest\\
+  ImpactObservableProperty subClassOf: ObservableProperty\\
+  MagnitudeObservableProperty subClassOf: ObservableProperty\\
+  ImpactObservation subClassOf: Observation\\
+  MagnitudeObservation subClassOf: Observation\\
+  ImpactObservationCollection subClassOf: ObservationCollection\\
+  MagnitudeObservationCollection subClassOf: ObservationCollection\\
+  endsAt some Fix \\
+  startsFrom some Fix \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hasAzimuth some rdfs:Literal \\
+  hasRange some rdfs:Literal \\
+  hasPart some NOAAHazard \\
+  hasNarrative some rdfs:Literal \\
+  observedProperty some ImpactObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some NOAAHazard \\
+  hasMember some ImpactObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  observedProperty some MagnitudeObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some NOAAHazard \\
+  hasMember some MagnitudeObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSegment some EventSegment \\
+  hasTemporalScope some time:TemporalEntity \\
+  spatialRelation some None \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  geo:asWKT only geo:wktLiteral \\
+  geo:asWKT some geo:wktLiteral \\
+  time:inXSDDateTime only xsd:dateTime \\
+  time:inXSDDateTime some xsd:dateTime \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{National Weather Zone Noaa}
+\label{sec:national-weather-zone-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/national-weather-zone-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the National Weather Zone Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  NWZone subClassOf: Region\\
+  NWZone subClassOf: geo:Feature\\
+  AdministrativeRegion subClassOf: Region\\
+  NWZone subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  NWZone subClassOf: geo:Feature\\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  hasNWZFIPS some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{External Ontology Dependencies}
+\label{sec:external-ontology-dependencies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/national-weather-zone-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the External Ontology Dependencies.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Disaster Declaration Fema}
+\label{sec:disaster-declaration-fema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/disaster-declaration-fema-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Disaster Declaration Fema.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  CrisisCounselling subClassOf: Program\\
+  DebrisRemoval-PA-A subClassOf: PublicAssistance\\
+  EmergencyDeclaration subClassOf: Declaration\\
+  FireManagementDeclaration subClassOf: Declaration\\
+  MajorDisasterDeclaration subClassOf: Declaration\\
+  DirectFederalAssistance subClassOf: Program\\
+  Disaster subClassOf: Hazard\\
+  Disaster subClassOf: geo:Feature\\
+  DisasterHousing subClassOf: Program\\
+  DisasterUnemploymentAssistance subClassOf: Program\\
+  DoD subClassOf: Program\\
+  EmergencyDeclaration subClassOf: Declaration\\
+  FireManagementAssistance-PA-I subClassOf: PublicAssistance\\
+  FireManagementDeclaration subClassOf: Declaration\\
+  Disaster subClassOf: Hazard\\
+  HazardMitigation subClassOf: Program\\
+  HousingAssistance subClassOf: Program\\
+  IndividualAndFamilyGrant subClassOf: Program\\
+  IndividualAssistance subClassOf: Program\\
+  IndividualAssistance-PA-C subClassOf: PublicAssistance\\
+  IndividualsAndHouseholds subClassOf: Program\\
+  MajorDisasterDeclaration subClassOf: Declaration\\
+  Other subClassOf: Program\\
+  CrisisCounselling subClassOf: Program\\
+  DirectFederalAssistance subClassOf: Program\\
+  DisasterHousing subClassOf: Program\\
+  DisasterUnemploymentAssistance subClassOf: Program\\
+  DoD subClassOf: Program\\
+  HazardMitigation subClassOf: Program\\
+  HousingAssistance subClassOf: Program\\
+  IndividualAndFamilyGrant subClassOf: Program\\
+  IndividualAssistance subClassOf: Program\\
+  IndividualsAndHouseholds subClassOf: Program\\
+  Other subClassOf: Program\\
+  PublicAssistance subClassOf: Program\\
+  SmallBusinessAdministration subClassOf: Program\\
+  ProtectiveMeasures-PA-B subClassOf: PublicAssistance\\
+  PublicAssistance subClassOf: Program\\
+  DebrisRemoval-PA-A subClassOf: PublicAssistance\\
+  FireManagementAssistance-PA-I subClassOf: PublicAssistance\\
+  IndividualAssistance-PA-C subClassOf: PublicAssistance\\
+  ProtectiveMeasures-PA-B subClassOf: PublicAssistance\\
+  PublicBuildings-PA-F subClassOf: PublicAssistance\\
+  PublicUtilitiesPA-G subClassOf: PublicAssistance\\
+  RecreationalOrOther-PA-H subClassOf: PublicAssistance\\
+  RoadsAndBridges-PA-D subClassOf: PublicAssistance\\
+  WaterControlFacilities-PA-E subClassOf: PublicAssistance\\
+  PublicBuildings-PA-F subClassOf: PublicAssistance\\
+  PublicUtilitiesPA-G subClassOf: PublicAssistance\\
+  RecreationalOrOther-PA-H subClassOf: PublicAssistance\\
+  AdministrativeRegion subClassOf: Region\\
+  RoadsAndBridges-PA-D subClassOf: PublicAssistance\\
+  SmallBusinessAdministration subClassOf: Program\\
+  WaterControlFacilities-PA-E subClassOf: PublicAssistance\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  Disaster subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  sfWithin only AdministrativeRegion \\
+  hasDeclarationID some rdfs:Literal \\
+  hasDeclaration some Declaration \\
+  hasProgram some Program \\
+  hasProgramID some rdfs:Literal \\
+  time:inXSDDateTime only xsd:dateTime \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Census Uscb}
+\label{sec:census-uscb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/census-uscb-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Census Uscb.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_2 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_2 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  CensusACS5YearEstimatesObservation subClassOf: Observation\\
+  CensusACS5YearEstimatesObservationCollection subClassOf: ObservationCollection\\
+  CensusObservableProperty subClassOf: ObservableProperty\\
+  USCensusMSA subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  USCensusMSA subClassOf: Region\\
+  USCensusMSA subClassOf: geo:Feature\\
+  USCensusMSA subClassOf: FeatureOfInterest\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  USCensusMSA subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Interval subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Interval subClassOf: time:TemporalEntity\\
+  USCensusMSA subClassOf: FeatureOfInterest\\
+  CensusObservableProperty subClassOf: ObservableProperty\\
+  CensusACS5YearEstimatesObservation subClassOf: Observation\\
+  CensusACS5YearEstimatesObservationCollection subClassOf: ObservationCollection\\
+  observedProperty some CensusObservableProperty \\
+  hasFeatureOfInterest some USCensusMSA \\
+  hasMember some CensusACS5YearEstimatesObservation \\
+  phenomenonTime some time:Interval \\
+  hasCode some rdfs:Literal \\
+  hasTemporalScope some time:Instant \\
+  typeOfLSAD some LSADArea \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_2 \\
+  spatialRelation only S2Cell \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Distributed Market Zones Nielsen}
+\label{sec:distributed-market-zones-nielsen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/distributed-market-zones-nielsen-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Distributed Market Zones Nielsen.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  NielsenMarketZone subClassOf: Region\\
+  NielsenMarketZone subClassOf: geo:Feature\\
+  AdministrativeRegion subClassOf: Region\\
+  NielsenMarketZone subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  NielsenMarketZone subClassOf: geo:Feature\\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  nielsenMarketZoneDMA some xsd:int \\
+  nielsenMarketZoneHHTV some xsd:int \\
+  nielsenMarketZoneID some xsd:double \\
+  nielsenMarketZonePUSA some xsd:string \\
+  nielsenMarketZoneRank some xsd:int \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Historical Fires Mtbs}
+\label{sec:historical-fires-mtbs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/historical-fires-mtbs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Historical Fires Mtbs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  ComplexFire subClassOf: Fire\\
+  MTBSComplexFire subClassOf: ComplexFire\\
+  Fire subClassOf: Hazard\\
+  ComplexFire subClassOf: Fire\\
+  MTBSFire subClassOf: Fire\\
+  OutOfAreaResponseFire subClassOf: Fire\\
+  PrescribedFire subClassOf: Fire\\
+  Wildfire subClassOf: Fire\\
+  WildlandFireUse subClassOf: Fire\\
+  Fire subClassOf: Hazard\\
+  MTBSComplexFire subClassOf: ComplexFire\\
+  MTBSComplexFire subClassOf: MTBSFire\\
+  MTBSFire subClassOf: Fire\\
+  MTBSFire subClassOf: geo:Feature\\
+  MTBSFire subClassOf: FeatureOfInterest\\
+  MTBSComplexFire subClassOf: MTBSFire\\
+  MTBSOutOfAreaResponseFire subClassOf: MTBSFire\\
+  MTBSPrescribedFire subClassOf: MTBSFire\\
+  MTBSUnknownFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: MTBSFire\\
+  MTBSWildlandFireUse subClassOf: MTBSFire\\
+  MTBSFireObservableProperty subClassOf: ObservableProperty\\
+  MTBSFireObservation subClassOf: Observation\\
+  MTBSFireObservationCollection subClassOf: ObservationCollection\\
+  MTBSOutOfAreaResponseFire subClassOf: MTBSFire\\
+  MTBSOutOfAreaResponseFire subClassOf: OutOfAreaResponseFire\\
+  MTBSPrescribedFire subClassOf: MTBSFire\\
+  MTBSPrescribedFire subClassOf: PrescribedFire\\
+  MTBSUnknownFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: Wildfire\\
+  MTBSWildlandFireUse subClassOf: MTBSFire\\
+  MTBSWildlandFireUse subClassOf: WildlandFireUse\\
+  OutOfAreaResponseFire subClassOf: Fire\\
+  MTBSOutOfAreaResponseFire subClassOf: OutOfAreaResponseFire\\
+  PrescribedFire subClassOf: Fire\\
+  MTBSPrescribedFire subClassOf: PrescribedFire\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  Wildfire subClassOf: Fire\\
+  MTBSWildFire subClassOf: Wildfire\\
+  WildlandFireUse subClassOf: Fire\\
+  MTBSWildlandFireUse subClassOf: WildlandFireUse\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  MTBSFire subClassOf: geo:Feature\\
+  MTBSFire subClassOf: FeatureOfInterest\\
+  MTBSFireObservableProperty subClassOf: ObservableProperty\\
+  MTBSFireObservation subClassOf: Observation\\
+  MTBSFireObservationCollection subClassOf: ObservationCollection\\
+  hasTemporalScope some time:TemporalEntity \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hasFireMappingAssessmentLabel only FireMappingAssessmentLabel \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  correspondingMapID only rdfs:Literal \\
+  hasFireName only rdfs:Literal \\
+  observedProperty some MTBSFireObservableProperty \\
+  hasSimpleResult only rdfs:Literal \\
+  hasFeatureOfInterest some MTBSFire \\
+  hasMember some MTBSFireObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasMappingProgram only MappingProgram \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Meta Description}
+\label{sec:meta-description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/historical-fires-mtbs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Meta Description.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  ComplexFire subClassOf: Fire\\
+  MTBSComplexFire subClassOf: ComplexFire\\
+  Fire subClassOf: Hazard\\
+  ComplexFire subClassOf: Fire\\
+  MTBSFire subClassOf: Fire\\
+  OutOfAreaResponseFire subClassOf: Fire\\
+  PrescribedFire subClassOf: Fire\\
+  Wildfire subClassOf: Fire\\
+  WildlandFireUse subClassOf: Fire\\
+  Fire subClassOf: Hazard\\
+  MTBSComplexFire subClassOf: ComplexFire\\
+  MTBSComplexFire subClassOf: MTBSFire\\
+  MTBSFire subClassOf: Fire\\
+  MTBSFire subClassOf: geo:Feature\\
+  MTBSFire subClassOf: FeatureOfInterest\\
+  MTBSComplexFire subClassOf: MTBSFire\\
+  MTBSOutOfAreaResponseFire subClassOf: MTBSFire\\
+  MTBSPrescribedFire subClassOf: MTBSFire\\
+  MTBSUnknownFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: MTBSFire\\
+  MTBSWildlandFireUse subClassOf: MTBSFire\\
+  MTBSFireObservableProperty subClassOf: ObservableProperty\\
+  MTBSFireObservation subClassOf: Observation\\
+  MTBSFireObservationCollection subClassOf: ObservationCollection\\
+  MTBSOutOfAreaResponseFire subClassOf: MTBSFire\\
+  MTBSOutOfAreaResponseFire subClassOf: OutOfAreaResponseFire\\
+  MTBSPrescribedFire subClassOf: MTBSFire\\
+  MTBSPrescribedFire subClassOf: PrescribedFire\\
+  MTBSUnknownFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: MTBSFire\\
+  MTBSWildFire subClassOf: Wildfire\\
+  MTBSWildlandFireUse subClassOf: MTBSFire\\
+  MTBSWildlandFireUse subClassOf: WildlandFireUse\\
+  OutOfAreaResponseFire subClassOf: Fire\\
+  MTBSOutOfAreaResponseFire subClassOf: OutOfAreaResponseFire\\
+  PrescribedFire subClassOf: Fire\\
+  MTBSPrescribedFire subClassOf: PrescribedFire\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  Wildfire subClassOf: Fire\\
+  MTBSWildFire subClassOf: Wildfire\\
+  WildlandFireUse subClassOf: Fire\\
+  MTBSWildlandFireUse subClassOf: WildlandFireUse\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  MTBSFire subClassOf: geo:Feature\\
+  MTBSFire subClassOf: FeatureOfInterest\\
+  MTBSFireObservableProperty subClassOf: ObservableProperty\\
+  MTBSFireObservation subClassOf: Observation\\
+  MTBSFireObservationCollection subClassOf: ObservationCollection\\
+  hasTemporalScope some time:TemporalEntity \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hasFireMappingAssessmentLabel only FireMappingAssessmentLabel \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  correspondingMapID only rdfs:Literal \\
+  hasFireName only rdfs:Literal \\
+  observedProperty some MTBSFireObservableProperty \\
+  hasSimpleResult only rdfs:Literal \\
+  hasFeatureOfInterest some MTBSFire \\
+  hasMember some MTBSFireObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasMappingProgram only MappingProgram \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Air Pollutant Epa}
+\label{sec:air-pollutant-epa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/air-pollutant-epa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Air Pollutant Epa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AirPollutant subClassOf: ObservableProperty\\
+  AirQualityInstrument subClassOf: Sensor\\
+  AirQualityObservation subClassOf: Observation\\
+  AirQualityObservationCollection subClassOf: ObservationCollection\\
+  AirQualitySite subClassOf: Platform\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AirPollutant subClassOf: ObservableProperty\\
+  AirQualityObservation subClassOf: Observation\\
+  AirQualityObservationCollection subClassOf: ObservationCollection\\
+  AirQualitySite subClassOf: Platform\\
+  AirQualityInstrument subClassOf: Sensor\\
+  pocValue only rdfs:Literal \\
+  dailyAQIValue some rdfs:Literal \\
+  resultTime some xsd:dateTime \\
+  hasMember some AirQualityObservation \\
+  madeBySensor some AirQualityInstrument \\
+  observedProperty some AirPollutant \\
+  sfWithin some S2Cell \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  hosts some AirQualityInstrument \\
+  sfWithin only AdministrativeRegion \\
+  cbsaCode some rdfs:Literal \\
+  cbsaName some rdfs:Literal \\
+  siteID some rdfs:Literal \\
+  siteName some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Public Health}
+\label{sec:public-health}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/hospital-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Public Health.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: FeatureOfInterest\\
+  S2Cell subClassOf: Cell\\
+  HealthCareFacility subClassOf: geo:Feature\\
+  Hospital subClassOf: HealthCareFacility\\
+  Pharmacy subClassOf: HealthCareFacility\\
+  PublicHealthDepartment subClassOf: HealthCareFacility\\
+  Hospital subClassOf: HealthCareFacility\\
+  TraumaCenter subClassOf: Hospital\\
+  Pharmacy subClassOf: HealthCareFacility\\
+  PublicHealthDepartment subClassOf: HealthCareFacility\\
+  PublicHealthObservableProperty subClassOf: ObservableProperty\\
+  PublicHealthObservation subClassOf: Observation\\
+  PublicHealthObservationCollection subClassOf: ObservationCollection\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  TraumaCenter subClassOf: Hospital\\
+  VulnerabilityObservableProperty subClassOf: ObservableProperty\\
+  VulnerabilityObservation subClassOf: Observation\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  HealthCareFacility subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  AdministrativeRegion_3 subClassOf: FeatureOfInterest\\
+  PublicHealthObservableProperty subClassOf: ObservableProperty\\
+  VulnerabilityObservableProperty subClassOf: ObservableProperty\\
+  PublicHealthObservation subClassOf: Observation\\
+  VulnerabilityObservation subClassOf: Observation\\
+  PublicHealthObservationCollection subClassOf: ObservationCollection\\
+  helipadAvailability some HelipadAvailability \\
+  hospitalStatus some HospitalStatus \\
+  hospitalType some HospitalType \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  sfWithin only AdministrativeRegion \\
+  sfWithin only S2Cell \\
+  hospitalName some rdfs:Literal \\
+  hospitalAddress only rdfs:Literal \\
+  noHospitalBeds only xsd:decimal \\
+  telephoneNo only rdfs:Literal \\
+  website only rdfs:Literal \\
+  zipCode only rdfs:Literal \\
+  pharmacyType some PharmacyType \\
+  spatialRelation some AdministrativeRegion \\
+  spatialRelation some S2Cell \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  address some rdfs:Literal \\
+  telephoneNo some rdfs:Literal \\
+  zipCode some rdfs:Literal \\
+  pharmacyName only rdfs:Literal \\
+  administrativeLevel some AdministrativeLevel \\
+  spatialRelation some AdministrativeRegion \\
+  spatialRelation some S2Cell \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  address some rdfs:Literal \\
+  telephoneNo some rdfs:Literal \\
+  zipCode some rdfs:Literal \\
+  publicHealthDepartmentName only rdfs:Literal \\
+  observedProperty some PublicHealthObservableProperty \\
+  hasSimpleResult some rdfs:Literal   hasFeatureOfInterest some AdministrativeRegion_3 \\
+  hasMember some PublicHealthObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasTraumaDescription some TraumaDescription \\
+  traumaCareLevel some TraumaCareLevel \\
+  traumaDescriptionSourceDate some time:Instant \\
+  traumaDescriptionForState some rdfs:Literal \\
+  traumaDescriptionSource some rdfs:Literal \\
+  observedProperty some VulnerabilityObservableProperty \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSimpleResult some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fqhc}
+\label{sec:fqhc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/fqhc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Fqhc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: FeatureOfInterest\\
+  S2Cell subClassOf: Cell\\
+  HealthCareFacility subClassOf: geo:Feature\\
+  Hospital subClassOf: HealthCareFacility\\
+  Pharmacy subClassOf: HealthCareFacility\\
+  PublicHealthDepartment subClassOf: HealthCareFacility\\
+  Hospital subClassOf: HealthCareFacility\\
+  TraumaCenter subClassOf: Hospital\\
+  Pharmacy subClassOf: HealthCareFacility\\
+  PublicHealthDepartment subClassOf: HealthCareFacility\\
+  PublicHealthObservableProperty subClassOf: ObservableProperty\\
+  PublicHealthObservation subClassOf: Observation\\
+  PublicHealthObservationCollection subClassOf: ObservationCollection\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  TraumaCenter subClassOf: Hospital\\
+  VulnerabilityObservableProperty subClassOf: ObservableProperty\\
+  VulnerabilityObservation subClassOf: Observation\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  HealthCareFacility subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  AdministrativeRegion_3 subClassOf: FeatureOfInterest\\
+  PublicHealthObservableProperty subClassOf: ObservableProperty\\
+  VulnerabilityObservableProperty subClassOf: ObservableProperty\\
+  PublicHealthObservation subClassOf: Observation\\
+  VulnerabilityObservation subClassOf: Observation\\
+  PublicHealthObservationCollection subClassOf: ObservationCollection\\
+  helipadAvailability some HelipadAvailability \\
+  hospitalStatus some HospitalStatus \\
+  hospitalType some HospitalType \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  sfWithin only AdministrativeRegion \\
+  sfWithin only S2Cell \\
+  hospitalName some rdfs:Literal \\
+  hospitalAddress only rdfs:Literal \\
+  noHospitalBeds only xsd:decimal \\
+  telephoneNo only rdfs:Literal \\
+  website only rdfs:Literal \\
+  zipCode only rdfs:Literal \\
+  pharmacyType some PharmacyType \\
+  spatialRelation some AdministrativeRegion \\
+  spatialRelation some S2Cell \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  address some rdfs:Literal \\
+  telephoneNo some rdfs:Literal \\
+  zipCode some rdfs:Literal \\
+  pharmacyName only rdfs:Literal \\
+  administrativeLevel some AdministrativeLevel \\
+  spatialRelation some AdministrativeRegion \\
+  spatialRelation some S2Cell \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  address some rdfs:Literal \\
+  telephoneNo some rdfs:Literal \\
+  zipCode some rdfs:Literal \\
+  publicHealthDepartmentName only rdfs:Literal \\
+  observedProperty some PublicHealthObservableProperty \\
+  hasSimpleResult some rdfs:Literal   hasFeatureOfInterest some AdministrativeRegion_3 \\
+  hasMember some PublicHealthObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  hasTraumaDescription some TraumaDescription \\
+  traumaCareLevel some TraumaCareLevel \\
+  traumaDescriptionSourceDate some time:Instant \\
+  traumaDescriptionForState some rdfs:Literal \\
+  traumaDescriptionSource some rdfs:Literal \\
+  observedProperty some VulnerabilityObservableProperty \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSimpleResult some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Smoke Plumes Noaa}
+\label{sec:smoke-plumes-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/smoke-plumes-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Smoke Plumes Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  SmokePlumeSnapshot subClassOf: Hazard\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  SmokePlumeObservableProperty subClassOf: ObservableProperty\\
+  SmokePlumeObservation subClassOf: Observation\\
+  SmokePlumeSnapshot subClassOf: Hazard\\
+  SmokePlumeSnapshot subClassOf: geo:Feature\\
+  SmokePlumeSnapshot subClassOf: FeatureOfInterest\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  SmokePlumeSnapshot subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  SmokePlumeSnapshot subClassOf: FeatureOfInterest\\
+  SmokePlumeObservableProperty subClassOf: ObservableProperty\\
+  SmokePlumeObservation subClassOf: Observation\\
+  hasFeatureOfInterest some SmokePlumeSnapshot \\
+  observedProperty some SmokePlumeObservableProperty \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSimpleResult some rdfs:Literal \\
+  hasTemporalScope some time:TemporalEntity \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Earthquake Usgs}
+\label{sec:earthquake-usgs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/earthquake-usgs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Earthquake Usgs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  Earthquake subClassOf: Hazard\\
+  Earthquake subClassOf: geo:Feature\\
+  Earthquake subClassOf: FeatureOfInterest\\
+  EarthquakeObservableProperty subClassOf: ObservableProperty\\
+  EarthquakeObservationCollection subClassOf: ObservationCollection\\
+  Earthquake subClassOf: Hazard\\
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  Earthquake subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  EarthquakeObservation subClassOf: Observation\\
+  Earthquake subClassOf: FeatureOfInterest\\
+  EarthquakeObservableProperty subClassOf: ObservableProperty\\
+  EarthquakeObservation subClassOf: Observation\\
+  EarthquakeObservationCollection subClassOf: ObservationCollection\\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  sfWithin only AdministrativeRegion_3 \\
+  hasFeatureOfInterest some Earthquake \\
+  hasMember some EarthquakeObservation \\
+  geo:asWKT only geo:wktLiteral \\
+  geo:asWKT some geo:wktLiteral \\
+  time:inXSDDateTime only xsd:dateTime \\
+  time:inXSDDateTime some xsd:dateTime \\
+  observedProperty some EarthquakeObservableProperty \\
+  hasSimpleResult some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Undrr Hazard Classification}
+\label{sec:undrr-hazard-classification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/scientific-taxonomy-pattern.png}
+  \end{center}
+  \caption{The schema diagram for the Undrr Hazard Classification.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None   None some None \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wildfire Nifc}
+\label{sec:wildfire-nifc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/wildfire-nifc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Wildfire Nifc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  ComplexFire subClassOf: Fire\\
+  NIFC_IncidentComplexFire subClassOf: ComplexFire\\
+  Fire subClassOf: Hazard\\
+  ComplexFire subClassOf: Fire\\
+  NIFC_Fire subClassOf: Fire\\
+  PrescribedFire subClassOf: Fire\\
+  Wildfire subClassOf: Fire\\
+  Fire subClassOf: Hazard\\
+  NIFCFireObservableProperty subClassOf: ObservableProperty\\
+  NIFCFireObservation subClassOf: Observation\\
+  NIFC_Fire subClassOf: Fire\\
+  NIFC_Fire subClassOf: geo:Feature\\
+  NIFC_Fire subClassOf: FeatureOfInterest\\
+  NIFC_IncidentComplexFire subClassOf: NIFC_Fire\\
+  NIFC_PrescribedFire subClassOf: NIFC_Fire\\
+  NIFC_Wildfire subClassOf: NIFC_Fire\\
+  NIFC_IncidentComplexFire subClassOf: ComplexFire\\
+  NIFC_IncidentComplexFire subClassOf: NIFC_Fire\\
+  NIFC_PrescribedFire subClassOf: NIFC_Fire\\
+  NIFC_PrescribedFire subClassOf: PrescribedFire\\
+  NIFC_Wildfire subClassOf: NIFC_Fire\\
+  NIFC_Wildfire subClassOf: Wildfire\\
+  PrescribedFire subClassOf: Fire\\
+  NIFC_PrescribedFire subClassOf: PrescribedFire\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  Wildfire subClassOf: Fire\\
+  NIFC_Wildfire subClassOf: Wildfire\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  NIFC_Fire subClassOf: geo:Feature\\
+  NIFC_Fire subClassOf: FeatureOfInterest\\
+  NIFCFireObservableProperty subClassOf: ObservableProperty\\
+  NIFCFireObservation subClassOf: Observation\\
+  hasFeatureOfInterest some NIFC_Fire \\
+  observedProperty some NIFCFireObservableProperty \\
+  phenomenonTime some time:TemporalEntity \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFireCause some FireCause \\
+  hasTemporalScope some time:TemporalEntity \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  hasIncidentName some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gnis Ld Usgs}
+\label{sec:gnis-ld-usgs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/gnisld-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Gnis Ld Usgs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  Airport subClassOf: BuiltUpArea\\
+  Arch subClassOf: BuiltUpArea\\
+  Arch subClassOf: Terrain\\
+  Arroyo subClassOf: SurfaceWater\\
+  Bar subClassOf: BuiltUpArea\\
+  Bar subClassOf: Terrain\\
+  Basin subClassOf: SurfaceWater\\
+  Basin subClassOf: Terrain\\
+  Crater subClassOf: Basin\\
+  Bay subClassOf: SurfaceWater\\
+  Beach subClassOf: SurfaceWater\\
+  Beach subClassOf: Terrain\\
+  Bench subClassOf: Terrain\\
+  Bend subClassOf: SurfaceWater\\
+  Bridge subClassOf: BuiltUpArea\\
+  Building subClassOf: BuiltUpArea\\
+  BuiltUpArea subClassOf: geosparql:SpatialObject\\
+  Airport subClassOf: BuiltUpArea\\
+  Arch subClassOf: BuiltUpArea\\
+  Bar subClassOf: BuiltUpArea\\
+  Bridge subClassOf: BuiltUpArea\\
+  Building subClassOf: BuiltUpArea\\
+  Canal subClassOf: BuiltUpArea\\
+  Cemetery subClassOf: BuiltUpArea\\
+  Church subClassOf: BuiltUpArea\\
+  Crossing subClassOf: BuiltUpArea\\
+  Dam subClassOf: BuiltUpArea\\
+  Harbor subClassOf: BuiltUpArea\\
+  Hospital subClassOf: BuiltUpArea\\
+  Mine subClassOf: BuiltUpArea\\
+  OilField subClassOf: BuiltUpArea\\
+  Park subClassOf: BuiltUpArea\\
+  PopulatedPlace subClassOf: BuiltUpArea\\
+  PostOffice subClassOf: BuiltUpArea\\
+  School subClassOf: BuiltUpArea\\
+  Tower subClassOf: BuiltUpArea\\
+  Trail subClassOf: BuiltUpArea\\
+  Tunnel subClassOf: BuiltUpArea\\
+  Well subClassOf: BuiltUpArea\\
+  Canal subClassOf: BuiltUpArea\\
+  Canal subClassOf: SurfaceWater\\
+  Cape subClassOf: Terrain\\
+  Cemetery subClassOf: BuiltUpArea\\
+  Census subClassOf: Division\\
+  Channel subClassOf: SurfaceWater\\
+  Church subClassOf: BuiltUpArea\\
+  Cliff subClassOf: Terrain\\
+  Crater subClassOf: Basin\\
+  Crater subClassOf: Terrain\\
+  Crossing subClassOf: BuiltUpArea\\
+  Dam subClassOf: BuiltUpArea\\
+  Dam subClassOf: SurfaceWater\\
+  Census subClassOf: Division\\
+  Locale subClassOf: Division\\
+  Reserve subClassOf: Division\\
+  Forest subClassOf: EcologicalRegime\\
+  Levee subClassOf: Embankment\\
+  Flat subClassOf: Terrain\\
+  Forest subClassOf: EcologicalRegime\\
+  Woodland subClassOf: Forest\\
+  Gap subClassOf: Terrain\\
+  Glacier subClassOf: SurfaceWater\\
+  Gut subClassOf: SurfaceWater\\
+  Harbor subClassOf: BuiltUpArea\\
+  Hospital subClassOf: BuiltUpArea\\
+  Island subClassOf: Terrain\\
+  Isthmus subClassOf: Terrain\\
+  Lake subClassOf: SurfaceWater\\
+  Lava subClassOf: Terrain\\
+  Levee subClassOf: Embankment\\
+  Locale subClassOf: Division\\
+  Mine subClassOf: BuiltUpArea\\
+  MountainRange subClassOf: Terrain\\
+  Sea subClassOf: Ocean\\
+  OilField subClassOf: BuiltUpArea\\
+  Park subClassOf: BuiltUpArea\\
+  Plain subClassOf: Terrain\\
+  PopulatedPlace subClassOf: BuiltUpArea\\
+  PostOffice subClassOf: BuiltUpArea\\
+  Rapids subClassOf: SurfaceWater\\
+  Reserve subClassOf: Division\\
+  Reservoir subClassOf: SurfaceWater\\
+  Ridge subClassOf: Terrain\\
+  Rock subClassOf: Terrain\\
+  School subClassOf: BuiltUpArea\\
+  Sea subClassOf: Ocean\\
+  Slope subClassOf: Terrain\\
+  Spring subClassOf: SurfaceWater\\
+  Stream subClassOf: SurfaceWater\\
+  Summit subClassOf: Terrain\\
+  SurfaceWater subClassOf: geosparql:SpatialObject\\
+  Arroyo subClassOf: SurfaceWater\\
+  Basin subClassOf: SurfaceWater\\
+  Bay subClassOf: SurfaceWater\\
+  Beach subClassOf: SurfaceWater\\
+  Bend subClassOf: SurfaceWater\\
+  Canal subClassOf: SurfaceWater\\
+  Channel subClassOf: SurfaceWater\\
+  Dam subClassOf: SurfaceWater\\
+  Glacier subClassOf: SurfaceWater\\
+  Gut subClassOf: SurfaceWater\\
+  Lake subClassOf: SurfaceWater\\
+  Rapids subClassOf: SurfaceWater\\
+  Reservoir subClassOf: SurfaceWater\\
+  Spring subClassOf: SurfaceWater\\
+  Stream subClassOf: SurfaceWater\\
+  Swamp subClassOf: SurfaceWater\\
+  Waterfall subClassOf: SurfaceWater\\
+  Swamp subClassOf: SurfaceWater\\
+  Terrain subClassOf: geosparql:SpatialObject  Arch subClassOf: Terrain\\
+  Bar subClassOf: Terrain\\
+  Basin subClassOf: Terrain\\
+  Beach subClassOf: Terrain\\
+  Bench subClassOf: Terrain\\
+  Cape subClassOf: Terrain\\
+  Cliff subClassOf: Terrain\\
+  Crater subClassOf: Terrain\\
+  Flat subClassOf: Terrain\\
+  Gap subClassOf: Terrain\\
+  Island subClassOf: Terrain\\
+  Isthmus subClassOf: Terrain\\
+  Lava subClassOf: Terrain\\
+  MountainRange subClassOf: Terrain\\
+  Plain subClassOf: Terrain\\
+  Ridge subClassOf: Terrain\\
+  Rock subClassOf: Terrain\\
+  Slope subClassOf: Terrain\\
+  Summit subClassOf: Terrain\\
+  Valley subClassOf: Terrain\\
+  Tower subClassOf: BuiltUpArea\\
+  Trail subClassOf: BuiltUpArea\\
+  Tunnel subClassOf: BuiltUpArea\\
+  Valley subClassOf: Terrain\\
+  Waterfall subClassOf: SurfaceWater\\
+  Well subClassOf: BuiltUpArea\\
+  Woodland subClassOf: Forest\\
+  BuiltUpArea subClassOf: geosparql:SpatialObject\\
+  SurfaceWater subClassOf: geosparql:SpatialObject\\
+  Terrain subClassOf: geosparql:SpatialObject\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cropland Types Usda}
+\label{sec:cropland-types-usda}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/cropland-types-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Cropland Types Usda.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  S2Cell subClassOf: Cell\\
+  CroplandObservableProperty subClassOf: ObservableProperty\\
+  CroplandObservation subClassOf: Observation\\
+  CroplandObservationCollection subClassOf: ObservationCollection\\
+  CroplandResult subClassOf: Result\\
+  S2Cell subClassOf: Cell\\
+  S2Cell subClassOf: FeatureOfInterest\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  S2Cell subClassOf: FeatureOfInterest\\
+  CroplandObservableProperty subClassOf: ObservableProperty\\
+  CroplandObservation subClassOf: Observation\\
+  CroplandObservationCollection subClassOf: ObservationCollection\\
+  CroplandResult subClassOf: Result\\
+  hasResult some CroplandResult \\
+  observedProperty some CroplandObservableProperty \\
+  hasFeatureOfInterest some S2Cell \\
+  hasMember some CroplandObservation \\
+  phenomenonTime some time:TemporalEntity \\
+  qudt:unit some qudt:Unit \\
+  qudt:value some xsd:double \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Zipcode Us}
+\label{sec:zipcode-us}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/zipcode-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Zipcode Us.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  ZipCodeArea subClassOf: geo:Feature\\
+  ZipCodeArea subClassOf: geo:Feature\\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  hasZipCode some rdfs:Literal \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hurricane Tracks Noaa}
+\label{sec:hurricane-tracks-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/hurricane-tracks-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Hurricane Tracks Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: Region\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: Region\\
+  S2Cell subClassOf: Cell\\
+  StormTrack subClassOf: geo:Feature\\
+  StormTrack subClassOf: FeatureOfInterest\\
+  StormTrackObservableProperty subClassOf: ObservableProperty\\
+  StormTrackObservation subClassOf: Observation\\
+  StormTrackObservationCollection subClassOf: ObservationCollection\\
+  StormTracklet subClassOf: geo:Feature\\
+  StormTracklet subClassOf: FeatureOfInterest\\
+  StormTrackletObservableProperty subClassOf: ObservableProperty\\
+  StormTrackletObservation subClassOf: Observation\\
+  StormTrackletObservationCollection subClassOf: ObservationCollection\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  StormTrack subClassOf: geo:Feature\\
+  StormTracklet subClassOf: geo:Feature\\
+  sf:Point subClassOf: geo:Geometry\\
+  sf:Point subClassOf: geo:Geometry\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Interval subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Interval subClassOf: time:TemporalEntity\\
+  StormTrack subClassOf: FeatureOfInterest\\
+  StormTracklet subClassOf: FeatureOfInterest\\
+  StormTrackObservableProperty subClassOf: ObservableProperty\\
+  StormTrackletObservableProperty subClassOf: ObservableProperty\\
+  StormTrackObservation subClassOf: Observation\\
+  StormTrackletObservation subClassOf: Observation\\
+  StormTrackObservationCollection subClassOf: ObservationCollection\\
+  StormTrackletObservationCollection subClassOf: ObservationCollection\\
+  hasStormTracklet some StormTracklet \\
+  hasTemporalScope some time:TemporalEntity \\
+  observedProperty some StormTrackObservableProperty \\
+  detailsURL some rdfs:Literal \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some StormTrack \\
+  hasMember some StormTrackObservation \\
+  phenomenonTime some time:Interval \\
+  hasTemporalScope some time:TemporalEntity \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  observedProperty some StormTrackletObservableProperty \\
+  hasSimpleResult some rdfs:Literal \\
+  hasFeatureOfInterest some StormTracklet \\
+  hasMember some StormTrackletObservation \\
+  phenomenonTime some time:Instant \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transportation Usdot}
+\label{sec:transportation-usdot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/transportation-usdot-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Transportation Usdot.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  AdministrativeRegion subClassOf: geo:Feature\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  AdministrativeRegion_3 subClassOf: AdministrativeRegion\\
+  S2Cell subClassOf: Cell\\
+  RoadSegment subClassOf: geo:Feature\\
+  RoadSegmentNode subClassOf: geo:Feature\\
+  S2Cell subClassOf: Cell\\
+  AdministrativeRegion subClassOf: geo:Feature\\
+  RoadSegment subClassOf: geo:Feature\\
+  RoadSegmentNode subClassOf: geo:Feature\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  time:Instant subClassOf: time:TemporalEntity\\
+  endsAt some RoadSegmentNode \\
+  hasRoadType some RoadType \\
+  sfTouches some RoadSegment \\
+  startsFrom some RoadSegmentNode \\
+  geo:hasDefaultGeometry some geo:Geometry \\
+  geo:hasGeometry some geo:Geometry \\
+  spatialRelation only AdministrativeRegion_3 \\
+  spatialRelation only S2Cell \\
+  hasLength some rdfs:Literal \\
+  hasRoadName some rdfs:Literal \\
+  hasRoadSign some rdfs:Literal \\
+  geo:hasDefaultGeometry some None \\
+  geo:hasGeometry some None \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
