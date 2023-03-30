@@ -11,3 +11,6 @@ documentation/main.toc
 
 # Cogan scratch work
 scratch.py
+
+# unneccessary resources
+kwg_documentation/*
