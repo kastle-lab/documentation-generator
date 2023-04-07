@@ -10,7 +10,7 @@ def get_namespace(prefix, graph):
 	for p, ns in graph.namespaces():
 		if p == prefix:
 			return ns
-	return None
+	return rdflib.term.URIRef("https://missing.com#missing")
 
 def get_predicate(prefix, predicate, graph):
 	'''Construct a URI for a predicate given the pred_name, prefix, and graph'''
