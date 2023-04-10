@@ -518,8 +518,7 @@ def generate_all_documentation(directory, output_dir):
 
 if __name__ == "__main__":
     argParser = argparse.ArgumentParser(
-        prog="workflow testing",
-        epilog="workflow testing"
+        prog="Takes the turtle owl files and create documentation in LaTeX",
     )
 
     argParser.add_argument(
