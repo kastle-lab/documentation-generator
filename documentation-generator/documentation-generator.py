@@ -540,6 +540,4 @@ if __name__ == "__main__":
     input_dir = args.input[0] if type(args.input) is list else args.input
     output_dir = args.output[0] if type(args.output) is list else args.output
 
-    print(input_dir, output_dir)
-
     generate_all_documentation(input_dir, output_dir)
