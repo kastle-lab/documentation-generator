@@ -509,6 +509,8 @@ def generate_all_documentation(directory, output_dir):
     # Generate sections for the patterns and get contributors
     contributors = set()
     for pattern in patterns:
+        # Useful print out just in case something goes wrong
+        print(f"Generating {pattern}")
         pattern_file = os.path.join(directory, pattern)
         pattern_contributors = generate_pattern_documentation(section_order, pattern_file, output_dir)
         contributors.update(pattern_contributors)
