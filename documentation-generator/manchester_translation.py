@@ -101,14 +101,16 @@ def axiom_translation(g, row):
     # print(sum_list)
     for axiom in sum_list:
         if axiom:
-            axiomatization += "  " + axiom
+            formated_axiom = "".join(["~\\textsf{" + s + "}" for s in axiom.split()])[1:]
+            formated_axiom = formated_axiom.replace("_","\_")
+            axiomatization += "  " + formated_axiom
             if axiom != sum_list[-1]:
                 axiomatization += "\\\\\n"
     axiomatization += "\\end{align}\n\n"
     return axiomatization
 
 if __name__ == "__main__":
-    path = "YOURPATH/kwg-seed-graph/schemas/earthquake-usgs"
+    path = "/Users/saeid/Documents/GitHub/kwg-seed-graph/schemas/earthquake-usgs"
     filename = "earthquake-usgs-schema.ttl"
     ttl_path = os.path.join(path, filename)
     row = {}

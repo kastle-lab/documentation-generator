@@ -266,6 +266,8 @@ def generate_all_documentation(directory, output_path):
     acknowledgement = "This work was supported by The National Science Foundation through the Award \\#2033521."
     # section_order = ["overview", "cqs", "usecases", "formalization", "submodules", "views", "entanglements", "examples"]
     section_order = ["overview", "formalization"]
+    # section_order = ["formalization"]
+
 
     # Generate sections for the patterns and get contributors
     contributors = set()
@@ -276,6 +278,7 @@ def generate_all_documentation(directory, output_path):
             print(row["dataset_name"], "Done.")
         except:
             print("ERROR reading file:", i, row["dataset_name"])
+        # break
         # contributors.update(pattern_contributors)
     # Regenerate the preamble
     generate_preamble([], acknowledgement)
