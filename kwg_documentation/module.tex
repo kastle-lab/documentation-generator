@@ -1,0 +1,2151 @@
+\chapter{Modules}
+\label{sec:mods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We list the individual modules of the ontology, together with their axioms and explanations thereof. Each axiom is listed only once (for now), i.e. some axioms pertaining to a module may be found in the axiom set listed for an earlier listed module. Schema diagrams are provided throughout, but the reader should keep in mind that while schema diagrams are very useful for understanding an ontology \cite{odp-documentation}, they are also inherently ambiguous.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bluesky Forecast Airfire}
+\label{sec:bluesky-forecast-airfire}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/bluesky-forecast-airfire-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Bluesky Forecast Airfire.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{BlueskyModel}~\textsf{subClassOf:}~\textsf{Sensor}\\
+  \textsf{BlueskyModeledWildfire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{BlueskyModeledWildfire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{BlueskyWildfireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{BlueskyWildfireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{BlueskyWildfireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{BlueskyModeledWildfire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{BlueskyModeledWildfire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{BlueskyWildfireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{BlueskyWildfireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{BlueskyWildfireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{BlueskyModel}~\textsf{subClassOf:}~\textsf{Sensor}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:Instant}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{BlueskyWildfireObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{BlueskyModeledWildfire}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{BlueskyWildfireObservation}\\
+  \textsf{madeBySensor}~\textsf{some}~\textsf{BlueskyModel}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:Instant}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Soil Ssurgo Usda}
+\label{sec:soil-ssurgo-usda}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/soil-ssurgo-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Soil Ssurgo Usda.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{GeometryCollection}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SoilMapUnitObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SoilMapUnitObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{SoilMapUnitOverlapObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{GeometryCollection}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SoilMapUnitObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SoilMapUnitObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitOverlapObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{hasGeometryMember}~\textsf{some}~\textsf{geo:Feature}\\
+  \textsf{hasGeometry}~\textsf{some}~\textsf{GeometryCollection}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SoilMapUnitObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{SoilMapUnit}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{SoilMapUnitObservation}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{SoilMapUnitOverlapObservation}\\
+  \textsf{hasMapUnitAreaSymbol}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasSoilMapUnitKey}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasSoilMapUnitSymbol}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{target}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SoilMapUnitObservableProperty}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Meta Description}
+\label{sec:meta-description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/soil-ssurgo-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Meta Description.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{GeometryCollection}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SoilMapUnitObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SoilMapUnitObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{SoilMapUnitOverlapObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{GeometryCollection}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{geo:SpatialObject}\\
+  \textsf{SoilMapUnit}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SoilMapUnitObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SoilMapUnitObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitOverlapObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SoilMapUnitObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{hasGeometryMember}~\textsf{some}~\textsf{geo:Feature}\\
+  \textsf{hasGeometry}~\textsf{some}~\textsf{GeometryCollection}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SoilMapUnitObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{SoilMapUnit}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{SoilMapUnitObservation}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{SoilMapUnitOverlapObservation}\\
+  \textsf{hasMapUnitAreaSymbol}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasSoilMapUnitKey}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasSoilMapUnitSymbol}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{target}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SoilMapUnitObservableProperty}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Federal Judicial District Doj}
+\label{sec:federal-judicial-district-doj}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/federal-judicial-district-doj-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Federal Judicial District Doj.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{FederalJudicalDistrict}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{FederalJudicalDistrict}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{hasJudgeInfo}~\textsf{only}~\textsf{JudegeInfo}\\
+  \textsf{inCircuit}~\textsf{only}~\textsf{RegionalCircuit}\\
+  \textsf{nominatedBy}~\textsf{only}~\textsf{USPresident}\\
+  \textsf{nominatedTime}~\textsf{only}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{geo:spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{geo:hasName}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasABBR}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasChiefJudge}~\textsf{some}~\textsf{ChiefJudge}\\
+  \textsf{nominatedBy}~\textsf{some}~\textsf{USPresident}\\
+  \textsf{nominatedTime}~\textsf{some}~\textsf{time:TemporalEntity}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Climate Divisions Observations Noaa}
+\label{sec:climate-divisions-observations-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/climate-divisions-observations-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Climate Divisions Observations Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{Quantity}~\textsf{subClassOf:}~\textsf{qudt:QuantityValue}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{ClimateDivisionObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionObservationResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{ClimateDivisionPropertyObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ClimateObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{Quantity}~\textsf{subClassOf:}~\textsf{qudt:QuantityValue}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Duration}~\textsf{subClassOf:}~\textsf{time:TemporalDuration}\\
+  \textsf{time:Duration}~\textsf{subClassOf:}~\textsf{time:TemporalDuration}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{ClimateObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ClimateObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ClimateDivisionObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionPropertyObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionObservationResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{USClimateDivision}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ClimateDivisionPropertyObservationCollection}\\
+  \textsf{mean}~\textsf{some}~\textsf{Quantity}\\
+  \textsf{value}~\textsf{some}~\textsf{Quantity}\\
+  \textsf{anomaly}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{rank}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ClimateObservation}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{ClimateObservableProperty}\\
+  \textsf{timeScale}~\textsf{some}~\textsf{time:Duration}\\
+  \textsf{hasResult}~\textsf{some}~\textsf{ClimateDivisionObservationResult}\\
+  \textsf{hasDefaultGeometry}~\textsf{some}~\textsf{Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{time:months}~\textsf{some}~\textsf{xsd:decimal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kwg Lite}
+\label{sec:kwg-lite}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/kwg-lite-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Kwg Lite.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{Quantity}~\textsf{subClassOf:}~\textsf{qudt:QuantityValue}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{ClimateDivisionObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionObservationResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{ClimateDivisionPropertyObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ClimateObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{Quantity}~\textsf{subClassOf:}~\textsf{qudt:QuantityValue}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Duration}~\textsf{subClassOf:}~\textsf{time:TemporalDuration}\\
+  \textsf{time:Duration}~\textsf{subClassOf:}~\textsf{time:TemporalDuration}\\
+  \textsf{USClimateDivision}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{ClimateObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ClimateObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ClimateDivisionObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionPropertyObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{ClimateDivisionObservationResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{USClimateDivision}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ClimateDivisionPropertyObservationCollection}\\
+  \textsf{mean}~\textsf{some}~\textsf{Quantity}\\
+  \textsf{value}~\textsf{some}~\textsf{Quantity}\\
+  \textsf{anomaly}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{rank}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ClimateObservation}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{ClimateObservableProperty}\\
+  \textsf{timeScale}~\textsf{some}~\textsf{time:Duration}\\
+  \textsf{hasResult}~\textsf{some}~\textsf{ClimateDivisionObservationResult}\\
+  \textsf{hasDefaultGeometry}~\textsf{some}~\textsf{Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{time:months}~\textsf{some}~\textsf{xsd:decimal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Admin Regions Gadm}
+\label{sec:admin-regions-gadm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/admin-regions-gadm-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Admin Regions Gadm.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_0}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_1}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_2}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_4}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_5}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_6}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_0}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_1}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_2}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_4}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_5}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_6}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{geo:haDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}  \textsf{geo:hasGeometry}~\textsf{only}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Drought Ndmc}
+\label{sec:drought-ndmc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/drought-ndmc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Drought Ndmc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{coversWeek}~\textsf{only}~\textsf{time:TemporalEntity}\\
+  \textsf{hasDroughtIntensity}~\textsf{only}~\textsf{DroughtIntensity}\\
+  \textsf{None}~\textsf{only}~\textsf{None}\\
+  \textsf{hasCode}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{hasLabel}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{coversWeek}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasDroughtIntensity}~\textsf{some}~\textsf{DroughtIntensity}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Storms Impacts Noaa}
+\label{sec:storms-impacts-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/storm-impacts-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Storms Impacts Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{ImpactObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ImpactObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ImpactObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MagnitudeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MagnitudeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{TornadoMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{WindMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{NOAAAstronomicalLowTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAAvalanche}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAABlizzard}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAACoastalFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADebrisFlow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseSmoke}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADrought}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustDevil}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExcessiveHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExtremeColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlashFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFreezingFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFrostFreeze}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFunnelCloud}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{NOAAAstronomicalLowTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAAvalanche}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAABlizzard}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAACoastalFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADebrisFlow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseSmoke}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADrought}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustDevil}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExcessiveHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExtremeColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlashFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFreezingFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFrostFreeze}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFunnelCloud}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavyRain}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavySnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighSurf}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHurricane}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAIceStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALake-EffectSnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALakeshoreFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALightning}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHurricaneTyphoon}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAARipCurrent}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASleet}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASneakerwave}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStormSurgeTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATornado}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWaterspout}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterWeather}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavyRain}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavySnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighSurf}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHurricane}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAIceStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALake-EffectSnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALakeshoreFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALightning}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHurricaneTyphoon}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAARipCurrent}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASleet}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASneakerwave}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStormSurgeTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATornado}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWaterspout}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{NOAAWinterStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterWeather}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{TornadoMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{WindMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{ImpactObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MagnitudeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ImpactObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MagnitudeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ImpactObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{endsAt}~\textsf{some}~\textsf{Fix}\\
+  \textsf{startsFrom}~\textsf{some}~\textsf{Fix}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{hasAzimuth}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasRange}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasPart}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasNarrative}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{ImpactObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ImpactObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{MagnitudeObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{MagnitudeObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSegment}~\textsf{some}~\textsf{EventSegment}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{None}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:asWKT}~\textsf{only}~\textsf{geo:wktLiteral}\\
+  \textsf{geo:asWKT}~\textsf{some}~\textsf{geo:wktLiteral}\\
+  \textsf{time:inXSDDateTime}~\textsf{only}~\textsf{xsd:dateTime}\\
+  \textsf{time:inXSDDateTime}~\textsf{some}~\textsf{xsd:dateTime}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{S2cells}
+\label{sec:s2cells}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/s2cells-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the S2cells.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{ImpactObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ImpactObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ImpactObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MagnitudeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MagnitudeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{TornadoMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{WindMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{NOAAAstronomicalLowTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAAvalanche}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAABlizzard}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAACoastalFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADebrisFlow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseSmoke}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADrought}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustDevil}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExcessiveHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExtremeColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlashFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFreezingFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFrostFreeze}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFunnelCloud}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{NOAAAstronomicalLowTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAAvalanche}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAABlizzard}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAACoastalFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADebrisFlow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADenseSmoke}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADrought}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustDevil}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAADustStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExcessiveHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAExtremeColdWindChill}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlashFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFreezingFog}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFrostFreeze}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAFunnelCloud}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavyRain}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavySnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighSurf}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHurricane}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAIceStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALake-EffectSnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALakeshoreFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALightning}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHurricaneTyphoon}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAARipCurrent}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASleet}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASneakerwave}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStormSurgeTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATornado}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWaterspout}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterWeather}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeat}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavyRain}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHeavySnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighSurf}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAHurricane}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAIceStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALake-EffectSnow}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALakeshoreFlood}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAALightning}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHail}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHighWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineHurricaneTyphoon}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAMarineTropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAARipCurrent}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASleet}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAASneakerwave}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStormSurgeTide}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAStrongWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAThunderstormWind}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATornado}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalDepression}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAATropicalStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWaterspout}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{NOAAWinterStorm}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NOAAWinterWeather}~\textsf{subClassOf:}~\textsf{NOAAHazard}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{TornadoMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NOAAWildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{WindMagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{MagnitudeObservationCollection}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{NOAAHazard}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{ImpactObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MagnitudeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{ImpactObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MagnitudeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{ImpactObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MagnitudeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{endsAt}~\textsf{some}~\textsf{Fix}\\
+  \textsf{startsFrom}~\textsf{some}~\textsf{Fix}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{hasAzimuth}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasRange}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasPart}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasNarrative}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{ImpactObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{ImpactObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{MagnitudeObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{NOAAHazard}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{MagnitudeObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSegment}~\textsf{some}~\textsf{EventSegment}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{None}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:asWKT}~\textsf{only}~\textsf{geo:wktLiteral}\\
+  \textsf{geo:asWKT}~\textsf{some}~\textsf{geo:wktLiteral}\\
+  \textsf{time:inXSDDateTime}~\textsf{only}~\textsf{xsd:dateTime}\\
+  \textsf{time:inXSDDateTime}~\textsf{some}~\textsf{xsd:dateTime}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{National Weather Zone Noaa}
+\label{sec:national-weather-zone-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/national-weather-zone-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the National Weather Zone Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NWZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hasNWZFIPS}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{External Ontology Dependencies}
+\label{sec:external-ontology-dependencies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/national-weather-zone-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the External Ontology Dependencies.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Disaster Declaration Fema}
+\label{sec:disaster-declaration-fema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/disaster-declaration-fema-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Disaster Declaration Fema.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{CrisisCounselling}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DebrisRemoval-PA-A}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{EmergencyDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{FireManagementDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{MajorDisasterDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{DirectFederalAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{Disaster}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{Disaster}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{DisasterHousing}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DisasterUnemploymentAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DoD}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{EmergencyDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{FireManagementAssistance-PA-I}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{FireManagementDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{Disaster}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{HazardMitigation}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{HousingAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualAndFamilyGrant}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualAssistance-PA-C}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{IndividualsAndHouseholds}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{MajorDisasterDeclaration}~\textsf{subClassOf:}~\textsf{Declaration}\\
+  \textsf{Other}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{CrisisCounselling}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DirectFederalAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DisasterHousing}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DisasterUnemploymentAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DoD}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{HazardMitigation}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{HousingAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualAndFamilyGrant}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{IndividualsAndHouseholds}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{Other}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{PublicAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{SmallBusinessAdministration}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{ProtectiveMeasures-PA-B}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{PublicAssistance}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{DebrisRemoval-PA-A}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{FireManagementAssistance-PA-I}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{IndividualAssistance-PA-C}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{ProtectiveMeasures-PA-B}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{PublicBuildings-PA-F}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{PublicUtilitiesPA-G}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{RecreationalOrOther-PA-H}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{RoadsAndBridges-PA-D}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{WaterControlFacilities-PA-E}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{PublicBuildings-PA-F}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{PublicUtilitiesPA-G}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{RecreationalOrOther-PA-H}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{RoadsAndBridges-PA-D}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{SmallBusinessAdministration}~\textsf{subClassOf:}~\textsf{Program}\\
+  \textsf{WaterControlFacilities-PA-E}~\textsf{subClassOf:}~\textsf{PublicAssistance}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{Disaster}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{AdministrativeRegion}\\
+  \textsf{hasDeclarationID}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasDeclaration}~\textsf{some}~\textsf{Declaration}\\
+  \textsf{hasProgram}~\textsf{some}~\textsf{Program}\\
+  \textsf{hasProgramID}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{time:inXSDDateTime}~\textsf{only}~\textsf{xsd:dateTime}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Census Uscb}
+\label{sec:census-uscb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/census-uscb-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Census Uscb.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_2}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_2}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{CensusACS5YearEstimatesObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{CensusACS5YearEstimatesObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{CensusObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Interval}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Interval}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{USCensusMSA}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{CensusObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{CensusACS5YearEstimatesObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{CensusACS5YearEstimatesObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{CensusObservableProperty}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{USCensusMSA}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{CensusACS5YearEstimatesObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:Interval}\\
+  \textsf{hasCode}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:Instant}\\
+  \textsf{typeOfLSAD}~\textsf{some}~\textsf{LSADArea}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_2}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Distributed Market Zones Nielsen}
+\label{sec:distributed-market-zones-nielsen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/distributed-market-zones-nielsen-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Distributed Market Zones Nielsen.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{NielsenMarketZone}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{NielsenMarketZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{NielsenMarketZone}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NielsenMarketZone}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{nielsenMarketZoneDMA}~\textsf{some}~\textsf{xsd:int}\\
+  \textsf{nielsenMarketZoneHHTV}~\textsf{some}~\textsf{xsd:int}\\
+  \textsf{nielsenMarketZoneID}~\textsf{some}~\textsf{xsd:double}\\
+  \textsf{nielsenMarketZonePUSA}~\textsf{some}~\textsf{xsd:string}\\
+  \textsf{nielsenMarketZoneRank}~\textsf{some}~\textsf{xsd:int}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Historical Fires Mtbs}
+\label{sec:historical-fires-mtbs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/historical-fires-mtbs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Historical Fires Mtbs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{OutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{WildlandFireUse}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSUnknownFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MTBSFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MTBSFireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{OutOfAreaResponseFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{MTBSUnknownFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{WildlandFireUse}\\
+  \textsf{OutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{OutOfAreaResponseFire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{WildlandFireUse}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{WildlandFireUse}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{MTBSFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MTBSFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MTBSFireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{hasFireMappingAssessmentLabel}~\textsf{only}~\textsf{FireMappingAssessmentLabel}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{correspondingMapID}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{hasFireName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{MTBSFireObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{MTBSFire}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{MTBSFireObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasMappingProgram}~\textsf{only}~\textsf{MappingProgram}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Meta Description}
+\label{sec:meta-description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/historical-fires-mtbs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Meta Description.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{OutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{WildlandFireUse}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{MTBSComplexFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSUnknownFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MTBSFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MTBSFireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{OutOfAreaResponseFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{MTBSUnknownFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{MTBSFire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{WildlandFireUse}\\
+  \textsf{OutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSOutOfAreaResponseFire}~\textsf{subClassOf:}~\textsf{OutOfAreaResponseFire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSPrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSWildFire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{WildlandFireUse}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{MTBSWildlandFireUse}~\textsf{subClassOf:}~\textsf{WildlandFireUse}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{MTBSFire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{MTBSFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{MTBSFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{MTBSFireObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{hasFireMappingAssessmentLabel}~\textsf{only}~\textsf{FireMappingAssessmentLabel}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{correspondingMapID}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{hasFireName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{MTBSFireObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{MTBSFire}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{MTBSFireObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasMappingProgram}~\textsf{only}~\textsf{MappingProgram}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Public Health}
+\label{sec:public-health}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/hospital-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Public Health.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{HealthCareFacility}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{Pharmacy}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthDepartment}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{TraumaCenter}~\textsf{subClassOf:}~\textsf{Hospital}\\
+  \textsf{Pharmacy}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthDepartment}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{PublicHealthObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{PublicHealthObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{TraumaCenter}~\textsf{subClassOf:}~\textsf{Hospital}\\
+  \textsf{VulnerabilityObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{VulnerabilityObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{HealthCareFacility}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{PublicHealthObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{VulnerabilityObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{PublicHealthObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{VulnerabilityObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{PublicHealthObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{helipadAvailability}~\textsf{some}~\textsf{HelipadAvailability}\\
+  \textsf{hospitalStatus}~\textsf{some}~\textsf{HospitalStatus}\\
+  \textsf{hospitalType}~\textsf{some}~\textsf{HospitalType}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{AdministrativeRegion}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hospitalName}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hospitalAddress}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{noHospitalBeds}~\textsf{only}~\textsf{xsd:decimal}\\
+  \textsf{telephoneNo}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{website}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{pharmacyType}~\textsf{some}~\textsf{PharmacyType}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{AdministrativeRegion}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{address}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{telephoneNo}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{pharmacyName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{administrativeLevel}~\textsf{some}~\textsf{AdministrativeLevel}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{AdministrativeRegion}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{address}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{telephoneNo}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{publicHealthDepartmentName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{PublicHealthObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{PublicHealthObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasTraumaDescription}~\textsf{some}~\textsf{TraumaDescription}\\
+  \textsf{traumaCareLevel}~\textsf{some}~\textsf{TraumaCareLevel}\\
+  \textsf{traumaDescriptionSourceDate}~\textsf{some}~\textsf{time:Instant}\\
+  \textsf{traumaDescriptionForState}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{traumaDescriptionSource}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{VulnerabilityObservableProperty}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fqhc}
+\label{sec:fqhc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/fqhc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Fqhc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{HealthCareFacility}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{Pharmacy}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthDepartment}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{TraumaCenter}~\textsf{subClassOf:}~\textsf{Hospital}\\
+  \textsf{Pharmacy}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthDepartment}~\textsf{subClassOf:}~\textsf{HealthCareFacility}\\
+  \textsf{PublicHealthObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{PublicHealthObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{PublicHealthObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{TraumaCenter}~\textsf{subClassOf:}~\textsf{Hospital}\\
+  \textsf{VulnerabilityObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{VulnerabilityObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{HealthCareFacility}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{PublicHealthObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{VulnerabilityObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{PublicHealthObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{VulnerabilityObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{PublicHealthObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{helipadAvailability}~\textsf{some}~\textsf{HelipadAvailability}\\
+  \textsf{hospitalStatus}~\textsf{some}~\textsf{HospitalStatus}\\
+  \textsf{hospitalType}~\textsf{some}~\textsf{HospitalType}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{AdministrativeRegion}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hospitalName}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hospitalAddress}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{noHospitalBeds}~\textsf{only}~\textsf{xsd:decimal}\\
+  \textsf{telephoneNo}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{website}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{pharmacyType}~\textsf{some}~\textsf{PharmacyType}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{AdministrativeRegion}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{address}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{telephoneNo}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{pharmacyName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{administrativeLevel}~\textsf{some}~\textsf{AdministrativeLevel}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{AdministrativeRegion}\\
+  \textsf{spatialRelation}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{address}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{telephoneNo}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{zipCode}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{publicHealthDepartmentName}~\textsf{only}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{PublicHealthObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{PublicHealthObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasTraumaDescription}~\textsf{some}~\textsf{TraumaDescription}\\
+  \textsf{traumaCareLevel}~\textsf{some}~\textsf{TraumaCareLevel}\\
+  \textsf{traumaDescriptionSourceDate}~\textsf{some}~\textsf{time:Instant}\\
+  \textsf{traumaDescriptionForState}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{traumaDescriptionSource}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{VulnerabilityObservableProperty}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Smoke Plumes Noaa}
+\label{sec:smoke-plumes-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/smoke-plumes-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Smoke Plumes Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{SmokePlumeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SmokePlumeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SmokePlumeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SmokePlumeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{SmokePlumeSnapshot}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SmokePlumeObservableProperty}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{National Hydrography Usgs}
+\label{sec:national-hydrography-usgs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/national-hyrography-usgs-schema.png}
+  \end{center}
+  \caption{The schema diagram for the National Hydrography Usgs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{SmokePlumeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SmokePlumeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{SmokePlumeSnapshot}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{SmokePlumeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{SmokePlumeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{SmokePlumeSnapshot}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{SmokePlumeObservableProperty}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Earthquake Usgs}
+\label{sec:earthquake-usgs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/earthquake-usgs-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Earthquake Usgs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{EarthquakeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{EarthquakeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{EarthquakeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{Earthquake}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{EarthquakeObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{EarthquakeObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{EarthquakeObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{sfWithin}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{Earthquake}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{EarthquakeObservation}\\
+  \textsf{geo:asWKT}~\textsf{only}~\textsf{geo:wktLiteral}\\
+  \textsf{geo:asWKT}~\textsf{some}~\textsf{geo:wktLiteral}\\
+  \textsf{time:inXSDDateTime}~\textsf{only}~\textsf{xsd:dateTime}\\
+  \textsf{time:inXSDDateTime}~\textsf{some}~\textsf{xsd:dateTime}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{EarthquakeObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Undrr Hazard Classification}
+\label{sec:undrr-hazard-classification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/scientific-taxonomy-pattern.png}
+  \end{center}
+  \caption{The schema diagram for the Undrr Hazard Classification.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}  \textsf{None}~\textsf{some}~\textsf{None}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wildfire Nifc}
+\label{sec:wildfire-nifc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/wildfire-nifc-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Wildfire Nifc.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NIFC\_IncidentComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{ComplexFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{Fire}~\textsf{subClassOf:}~\textsf{Hazard}\\
+  \textsf{NIFCFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{NIFCFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{NIFC\_IncidentComplexFire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_PrescribedFire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_Wildfire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_IncidentComplexFire}~\textsf{subClassOf:}~\textsf{ComplexFire}\\
+  \textsf{NIFC\_IncidentComplexFire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_PrescribedFire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_PrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{NIFC\_Wildfire}~\textsf{subClassOf:}~\textsf{NIFC\_Fire}\\
+  \textsf{NIFC\_Wildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{PrescribedFire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NIFC\_PrescribedFire}~\textsf{subClassOf:}~\textsf{PrescribedFire}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{Wildfire}~\textsf{subClassOf:}~\textsf{Fire}\\
+  \textsf{NIFC\_Wildfire}~\textsf{subClassOf:}~\textsf{Wildfire}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{NIFC\_Fire}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{NIFCFireObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{NIFCFireObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{NIFC\_Fire}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{NIFCFireObservableProperty}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFireCause}~\textsf{some}~\textsf{FireCause}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hasIncidentName}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gnis Ld Usgs}
+\label{sec:gnis-ld-usgs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/gnisld-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Gnis Ld Usgs.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{Airport}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Arch}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Arch}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Arroyo}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Bar}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Bar}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Basin}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Basin}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Crater}~\textsf{subClassOf:}~\textsf{Basin}\\
+  \textsf{Bay}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Beach}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Beach}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Bench}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Bend}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Bridge}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Building}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{BuiltUpArea}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}\\
+  \textsf{Airport}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Arch}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Bar}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Bridge}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Building}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Canal}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Cemetery}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Church}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Crossing}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Dam}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Harbor}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Mine}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{OilField}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Park}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{PopulatedPlace}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{PostOffice}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{School}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Tower}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Trail}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Tunnel}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Well}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Canal}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Canal}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Cape}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Cemetery}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Census}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Channel}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Church}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Cliff}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Crater}~\textsf{subClassOf:}~\textsf{Basin}\\
+  \textsf{Crater}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Crossing}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Dam}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Dam}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Census}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Locale}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Reserve}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Forest}~\textsf{subClassOf:}~\textsf{EcologicalRegime}\\
+  \textsf{Levee}~\textsf{subClassOf:}~\textsf{Embankment}\\
+  \textsf{Flat}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Forest}~\textsf{subClassOf:}~\textsf{EcologicalRegime}\\
+  \textsf{Woodland}~\textsf{subClassOf:}~\textsf{Forest}\\
+  \textsf{Gap}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Glacier}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Gut}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Harbor}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Hospital}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Island}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Isthmus}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Lake}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Lava}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Levee}~\textsf{subClassOf:}~\textsf{Embankment}\\
+  \textsf{Locale}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Mine}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{MountainRange}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Sea}~\textsf{subClassOf:}~\textsf{Ocean}\\
+  \textsf{OilField}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Park}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Plain}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{PopulatedPlace}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{PostOffice}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Rapids}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Reserve}~\textsf{subClassOf:}~\textsf{Division}\\
+  \textsf{Reservoir}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Ridge}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Rock}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{School}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Sea}~\textsf{subClassOf:}~\textsf{Ocean}\\
+  \textsf{Slope}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Spring}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Stream}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Summit}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{SurfaceWater}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}\\
+  \textsf{Arroyo}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Basin}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Bay}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Beach}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Bend}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Canal}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Channel}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Dam}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Glacier}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Gut}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Lake}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Rapids}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Reservoir}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Spring}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Stream}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Swamp}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Waterfall}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Swamp}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Terrain}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}  \textsf{Arch}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Bar}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Basin}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Beach}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Bench}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Cape}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Cliff}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Crater}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Flat}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Gap}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Island}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Isthmus}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Lava}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{MountainRange}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Plain}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Ridge}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Rock}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Slope}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Summit}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Valley}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Tower}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Trail}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Tunnel}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Valley}~\textsf{subClassOf:}~\textsf{Terrain}\\
+  \textsf{Waterfall}~\textsf{subClassOf:}~\textsf{SurfaceWater}\\
+  \textsf{Well}~\textsf{subClassOf:}~\textsf{BuiltUpArea}\\
+  \textsf{Woodland}~\textsf{subClassOf:}~\textsf{Forest}\\
+  \textsf{BuiltUpArea}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}\\
+  \textsf{SurfaceWater}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}\\
+  \textsf{Terrain}~\textsf{subClassOf:}~\textsf{geosparql:SpatialObject}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cropland Types Usda}
+\label{sec:cropland-types-usda}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/cropland-types-usda-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Cropland Types Usda.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{CroplandObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{CroplandObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{CroplandObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{CroplandResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{CroplandObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{CroplandObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{CroplandObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{CroplandResult}~\textsf{subClassOf:}~\textsf{Result}\\
+  \textsf{hasResult}~\textsf{some}~\textsf{CroplandResult}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{CroplandObservableProperty}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{S2Cell}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{CroplandObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{qudt:unit}~\textsf{some}~\textsf{qudt:Unit}\\
+  \textsf{qudt:value}~\textsf{some}~\textsf{xsd:double}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Zipcode Us}
+\label{sec:zipcode-us}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/zipcode-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Zipcode Us.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{ZipCodeArea}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{ZipCodeArea}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hasZipCode}~\textsf{some}~\textsf{rdfs:Literal}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hurricane Tracks Noaa}
+\label{sec:hurricane-tracks-noaa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/hurricane-tracks-noaa-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Hurricane Tracks Noaa.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{Region}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{StormTrack}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{StormTrack}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{StormTrackObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{StormTrackObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{StormTrackObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{StormTracklet}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{StormTracklet}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{StormTrackletObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{StormTrackletObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{StormTrackletObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{StormTrack}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{StormTracklet}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{sf:Point}~\textsf{subClassOf:}~\textsf{geo:Geometry}\\
+  \textsf{sf:Point}~\textsf{subClassOf:}~\textsf{geo:Geometry}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Interval}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Interval}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{StormTrack}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{StormTracklet}~\textsf{subClassOf:}~\textsf{FeatureOfInterest}\\
+  \textsf{StormTrackObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{StormTrackletObservableProperty}~\textsf{subClassOf:}~\textsf{ObservableProperty}\\
+  \textsf{StormTrackObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{StormTrackletObservation}~\textsf{subClassOf:}~\textsf{Observation}\\
+  \textsf{StormTrackObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{StormTrackletObservationCollection}~\textsf{subClassOf:}~\textsf{ObservationCollection}\\
+  \textsf{hasStormTracklet}~\textsf{some}~\textsf{StormTracklet}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{StormTrackObservableProperty}\\
+  \textsf{detailsURL}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{StormTrack}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{StormTrackObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:Interval}\\
+  \textsf{hasTemporalScope}~\textsf{some}~\textsf{time:TemporalEntity}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{observedProperty}~\textsf{some}~\textsf{StormTrackletObservableProperty}\\
+  \textsf{hasSimpleResult}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasFeatureOfInterest}~\textsf{some}~\textsf{StormTracklet}\\
+  \textsf{hasMember}~\textsf{some}~\textsf{StormTrackletObservation}\\
+  \textsf{phenomenonTime}~\textsf{some}~\textsf{time:Instant}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transportation Usdot}
+\label{sec:transportation-usdot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{ssec:overview}
+%%%%%%%%%%
+
+I am the overview.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth]{resources/transportation-usdot-schema-diagram.png}
+  \end{center}
+  \caption{The schema diagram for the Transportation Usdot.}
+  \label{fig:ov-diagram}
+\end{figure}
+
+
+\subsection{Axioms}
+\begin{align}
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{AdministrativeRegion\_3}~\textsf{subClassOf:}~\textsf{AdministrativeRegion}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{RoadSegment}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{RoadSegmentNode}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{S2Cell}~\textsf{subClassOf:}~\textsf{Cell}\\
+  \textsf{AdministrativeRegion}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{RoadSegment}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{RoadSegmentNode}~\textsf{subClassOf:}~\textsf{geo:Feature}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{time:Instant}~\textsf{subClassOf:}~\textsf{time:TemporalEntity}\\
+  \textsf{endsAt}~\textsf{some}~\textsf{RoadSegmentNode}\\
+  \textsf{hasRoadType}~\textsf{some}~\textsf{RoadType}\\
+  \textsf{sfTouches}~\textsf{some}~\textsf{RoadSegment}\\
+  \textsf{startsFrom}~\textsf{some}~\textsf{RoadSegmentNode}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{geo:Geometry}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{AdministrativeRegion\_3}\\
+  \textsf{spatialRelation}~\textsf{only}~\textsf{S2Cell}\\
+  \textsf{hasLength}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasRoadName}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{hasRoadSign}~\textsf{some}~\textsf{rdfs:Literal}\\
+  \textsf{geo:hasDefaultGeometry}~\textsf{some}~\textsf{None}\\
+  \textsf{geo:hasGeometry}~\textsf{some}~\textsf{None}\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% End Section %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
